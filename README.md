@@ -7,7 +7,7 @@ Victoria Torres
 ## Versión 💻
 La versión actual de este proyecto corresponde a la 2da entrega del curso Desarrollo Web de CODERHOUSE.
 
-### Link de Deployment:
+## Link de _Deployment_ 🔗
 https://victoria-v-torres.github.io/sohica-web/
 
 ## Notas importantes 📝
