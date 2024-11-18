@@ -18,44 +18,47 @@ body {
 /**-------------------------------------------------------*/
 
 header {
-    background-color: #d8f7cb;
-    color: black;
-    padding: 15px;
     position: sticky;
     top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     z-index: 1;
     box-shadow: 0px 4px 14px -4px rgba(73,97,65,0.5);
     -webkit-box-shadow: 0px 4px 14px -4px rgba(73,97,65,0.5);
     -moz-box-shadow: 0px 4px 14px -4px rgba(73,97,65,0.5);
+}
 
+/*Cambia el color a la navbar de Bootstrap*/
+.nav-fondo {
+    background-color: #d8f7cb;
+}
+
+/*Disminuye el tamaño del contenedor del logo de la navbar de Bootstrap*/
+.navbar-brand {
+    width: 46%;
 }
 
 .logo {
-    width: 35%;
+    width: 50%;
 }
 
-header nav {
-    width: 70%;
+/*Cambia el ancho del "ul" del navbar para que ocupe el 100% del ancho
+del contendor de Bootstrap*/
+.navbar-nav {
+    width: 100%; /*! OJO: cuando pasa a menu hamburguesa hay que ajustar esta propiedad*/
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+/*Cambia el color del hover de los links de la navbar de Bootstrap*/
+.nav-link:hover {
+    color: #1085b6;
 }
 
-header nav ul li {
-    margin: 5px;
-    padding: 10px;
-
+/*Cambia el color del link "activo" de la navbar de Bootstrap*/
+.active {
+    color: #0a78ab !important;
 }
 
-header nav ul li a {
-    text-decoration: none;
-    color: black;
+/*Cambiar el color del borde del botón de menú hamburguesa de Bootstrap*/
+.navbar-toggler {
+    border: 1px solid #2089b6f7;
 }
 
 /**-------------------------------------------------------*/
