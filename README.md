@@ -13,6 +13,6 @@ https://victoria-v-torres.github.io/sohica-web/
 ## Notas importantes 📝
 - La página _index_ y la página "¿Quiénes somos?" son las únicas que poseen responsive en esta versión del proyecto.
 - Se utilizó _Grids_ para diagramar la galería de imágenes de las instalaciones en la página "¿Quiénes somos?".
-- Se incorporó _Bootstrap_ al proyecto en el componente para el menú de navegación de la web en el _header_.
+- Se incorporó _Bootstrap_ al proyecto en el componente para el menú de navegación de la web en el _header_ y en el componente de formulario en la página "Contacto".
 - Se incorporó _XXXXXX_ al proyecto para integrar un carrusel de tarjetas para presentar al personal en el index.
 - Se utilizó en general _flexbox_ y CSS para diagramar las diferentes páginas de la web.

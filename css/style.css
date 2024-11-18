@@ -81,7 +81,7 @@ del contendor de Bootstrap*/
     align-items: center;
 }
 
-.hero .hero-info {
+.hero-info {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.648);
@@ -92,14 +92,14 @@ del contendor de Bootstrap*/
 
 }
 
-.hero .hero-info h1 {
+.hero-info h1 {
     font-size: 60px;
     color: white;
     padding: 10px;
     border-bottom: 4px solid white;
 }
 
-.hero .hero-info p {
+.hero-info p {
     width: 75%;
     font-size: 20px;
     color: white;
@@ -108,7 +108,7 @@ del contendor de Bootstrap*/
 
 }
 
-.hero .hero-botones {
+.hero-botones {
     display: flex;
     justify-content: center;
 }
@@ -370,6 +370,26 @@ del contendor de Bootstrap*/
 /**-------------Estilos Pág. ¿QUIÉNES SOMOS?--------------*/
 /**-------------------------------------------------------*/
 
+.banner {
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner-img-quienes-somos {
+    background-image: url("../img/quienes-somos-banner.jpg");
+}
+
 .quienes-somos-instalaciones img {
     height: 300px;
     width: auto;
@@ -424,6 +444,9 @@ del contendor de Bootstrap*/
 /**-------------------------------------------------------*/
 /**----------------Estilos Pág. SERVICIOS-----------------*/
 /**-------------------------------------------------------*/
+.banner-img-servicios {
+    background-image: url("../img/servicios-banner.jpg");
+}
 
 .servicios div a {
     text-decoration: none;
@@ -434,10 +457,100 @@ del contendor de Bootstrap*/
 /**-------------------------------------------------------*/
 /**-----------------Estilos Pág. PERSONAL-----------------*/
 /**-------------------------------------------------------*/
+.banner-img-personal {
+    background-image: url("../img/personal-banner.jpg");
+}
 
 /**-------------------------------------------------------*/
 /**-----------------Estilos Pág. CONTACTO-----------------*/
 /**-------------------------------------------------------*/
+.banner-img-contacto {
+    background-image: url("../img/contacto-banner.jpg");
+}
+
+.contacto-mapa-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px 30px 30px 30px;
+    padding: 10px;
+}
+
+.contacto-mapa-form h2 {
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    font-size: 40px;
+    border-bottom: 4px solid #070707;
+}
+
+.mapa {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa iframe {
+    margin: 10px;
+}
+
+.formulario {
+    width: 40%;
+    background-color: #009fe317;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00A0E3;
+    border-radius: 5px;
+}
+
+.formulario form {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Cambia el ancho que ocupan los "divs" contenedores de las etiquetas
+y los inputs de Bootstrap*/
+form div {
+    width: 80%;
+}
+
+/*Cambia el color del "focus" de los inputs de Bootstrap*/
+.form-control:focus {
+    border-color: #00b400;
+    box-shadow: 0 0 0 0.25rem #029f024f;
+}
+
+.form-botones {
+    display: flex;
+    justify-content: center;
+}
+
+/*Cambia los márgenes de los botones de Bootstrap*/
+.form-botones button {
+    margin: 0px 10px 0px 10px;
+}
+
+/*Cambio de los colores de botones de Bootstrap y su hover*/
+.btn-primary {
+    background-color: #00b400;
+    border: 1px solid #00b400;
+}
+
+.btn-primary:hover {
+    background-color: #0b750b;
+    border: 1px solid #0b750b;
+}
+
+.btn-outline-primary {
+    border: 1px solid #00b400;
+    color: #00b400;
+}
 
 /**-------------------------------------------------------*/
 /**-------------------Estilos del FOOTER------------------*/
