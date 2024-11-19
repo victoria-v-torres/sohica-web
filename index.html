@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--CSS-->
     <link rel="stylesheet" href="./css/style.css"> <!--Conectamos el archivo CSS de estilos-->
+    <!--FAVICON-->
     <link rel="shortcut icon" href="./img/logo-clinica-industrial-sohica-favicon.png">
     <!--Agregamos ícono a la pestaña del sitio web-->
     <title>Clínica Industrial SOHICA</title> <!--Agregamos nombre del sitio a la pestaña del sitio web-->
@@ -14,7 +19,7 @@
 
 <body>
     <header> <!--Encabezado del sitio web-->
-        <nav class="navbar navbar-expand-lg nav-fondo">  <!--Componente NavBar de Bootstrap-->
+        <nav class="navbar navbar-expand-lg nav-fondo"> <!--Componente NavBar de Bootstrap-->
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">
                     <img class="logo" src="./img/logo-clinica-industrial-sohica-large.png"
@@ -59,10 +64,9 @@
                 <p>Más de 26 años de experiencia en el mercado nacional e internacional ofreciendo servicios de Salud
                     Ocupacional, Seguridad e Higiene Industrial para garantizar un ambiente laboral seguro y saludable.
                     ¡Estamos aquí para apoyar a tu equipo y potenciar su rendimiento!</p>
-
                 <div class="hero-botones">
-                    <a href="./pages/contacto.html" class="boton-delineado">Nuestros servicios</a>
-                    <a href="./pages/contacto.html" class="boton-primario">Contáctanos</a>
+                    <a href="./pages/contacto.html" class="btn btn-outline-primary">Nuestros servicios</a>
+                    <a href="./pages/contacto.html" class="btn btn-primary">Contáctanos</a>
                 </div>
             </div>
 
@@ -77,7 +81,7 @@
                     caracterizándonos por comprender las necesidades de nuestros clientes para brindarles un servicio
                     confiable y de alta calidad. </p>
 
-                <a href="./pages/quienes-somos.html" class="boton-primario">Más sobre nosotros</a>
+                <a href="./pages/quienes-somos.html" class="btn btn-primary">Más sobre nosotros</a>
             </div>
 
             <img src="./img/quienes-somos.jpg" alt="personal médico con trabajadores de diferentes medios">
@@ -86,26 +90,30 @@
         <section class="salud-ocu-gestion-proc">
 
             <h2>Unificamos la <span class="texto-verde">Salud Ocupacional, Seguridad e Higiene Industrial</span> con la
-                <span class="texto-azul">Gestión de Seguridad de Procesos</span></h2>
+                <span class="texto-azul">Gestión de Seguridad de Procesos</span>
+            </h2>
 
             <div class="areas-trabajo">
                 <div class="salud-ocupacional">
                     <ul>
-                        <li>Registrados como empresa prestadora del servicio de Seguridad y Salud en el Trabajo ante el
-                            INPSASEL.</li>
-                        <li>Contamos con profesionales altamente calificados y certificados ante INPSASEL.</li>
-                    </ul>
-                </div>
-
-                <div class="gestion-procesos">
-                    <ul>
-                        <li>Equipo de trabajo multidisciplinario, especialista en el área de seguridad y salud
-                            ocupacional.</li>
+                        <li>Equipo médico especialista en salud ocupacional.</li>
 
                         <li>Equipos de pruebas especiales, debidamente calibrados con laboratorio y radiología en las
                             instalaciones.</li>
 
                         <li>Reportes estadísticos con Vigilancia Epidemiológica.</li>
+                    </ul>
+                </div>
+
+                <div class="gestion-procesos">
+                    <ul>
+                        <li>Registrados como empresa prestadora del servicio de Seguridad y Salud en el Trabajo ante el
+                            INPSASEL.</li>
+
+                        <li>Especialista en el área de seguridad e higiene industrial y en gestión de seguridad de
+                            procesos</li>
+
+                        <li>Contamos con profesionales altamente calificados y certificados ante INPSASEL.</li>
                     </ul>
                 </div>
             </div>
@@ -114,98 +122,187 @@
         <section class="servicios">
             <h2>Conoce nuestros servicios</h2>
 
-            <div class="grid-servicios">
-                <div>
-                    <a href="">
-                        <img src="./img/salud-ocupacional.png" alt="ícono ilustrado con médicos">
-                        <h3>Gestión de Salud Ocupacional</h3>
-                    </a>
+            <div class="servicios-contenedor">
+                <div class="grid-servicios">
+                    <div class="grid-servicios-item">
+                        <a href="">
+                            <img src="./img/salud-ocupacional.png" alt="ícono ilustrado con médicos">
+                            <h3>Gestión de Salud Ocupacional</h3>
+                        </a>
+                    </div>
+
+                    <div class="grid-servicios-item">
+                        <a href="./pages/servicios.html">
+                            <img src="./img/seguridad-e-higiene-industrial.png"
+                                alt="ícono ilustrado de gestión de seguridad e higiene industrial">
+                            <h3>Gestión de Seguridad Ocupacional e Higiene Industrial</h3>
+                        </a>
+                    </div>
+
+                    <div class="grid-servicios-item">
+                        <a href="./pages/servicios.html">
+                            <img src="./img/gestion-ambiental.png" alt="ícono ilustrado de gestión ambiental">
+                            <h3>Gestión de Calidad y Ambiente</h3>
+                        </a>
+                    </div>
+
+                    <div class="grid-servicios-item">
+                        <a href="./pages/servicios.html">
+                            <img src="./img/gestion-seguridad-de-procesos.png"
+                                alt="ícono ilustrado de seguridad de procesos">
+                            <h3>Gestión de Seguridad de Procesos (OSHA PSM/CCPS-RBPS)</h3>
+                        </a>
+                    </div>
+
+                    <div class="grid-servicios-item">
+                        <a href="./pages/servicios.html">
+                            <img src="./img/capacitacion.png" alt="ícono ilustrado de instructor">
+                            <h3>Capacitación y Coaching</h3>
+                        </a>
+                    </div>
                 </div>
 
-                <div>
-                    <a href="./pages/servicios.html">
-                        <img src="./img/seguridad-e-higiene-industrial.png"
-                            alt="ícono ilustrado de gestión de seguridad e higiene industrial">
-                        <h3>Gestión de Seguridad Ocupacional e Higiene Industrial</h3>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="./pages/servicios.html">
-                        <img src="./img/gestion-ambiental.png" alt="ícono ilustrado de gestión ambiental">
-                        <h3>Gestión de Calidad y Ambiente</h3>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="./pages/servicios.html">
-                        <img src="./img/gestion-seguridad-de-procesos.png"
-                            alt="ícono ilustrado de seguridad de procesos">
-                        <h3>Gestión de Seguridad de Procesos (OSHA PSM/CCPS-RBPS)</h3>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="./pages/servicios.html">
-                        <img src="./img/capacitacion.png" alt="ícono ilustrado de instructor">
-                        <h3>Capacitación y Coaching</h3>
-                    </a>
-                </div>
+                <a class="btn btn-primary" href="./pages/servicios.html">Ver más detalles</a>
             </div>
-
-            <a href="./pages/servicios.html" class="servicios-boton">Ver más detalles</a>
         </section>
 
         <section class="personal">
             <h2>Nuestro directorio de profesionales</h2>
 
-            <h3>Subtitulo de seccion</h3>
-
-            <div class="personal-contenedor-carrusel">
-                <a href="">
-                    <img src="./img/flecha-izquierda.png" alt="flecha hacia la izquierda">
-                </a>
-
-                <div>
-                    <img src="./img/doctor-1.jpg" alt="Doctor en uniforme blanco">
-                    <h4>Title</h4>
-                    <h5>Subtitle</h5>
+            <div id="carouselExample" class="carousel carousel-dark slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="cards-wrapper">
+                            <div class="card">
+                                <div class="image-wrapper">
+                                    <img src="./img/doctor-1.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">María Ramirez</h3>
+                                    <h4 class="card-subtitle">Médico SC. en Salud Ocupacional</h4>
+                                    <a href="#" class="btn btn-outline-info">Ver más</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image-wrapper">
+                                    <img src="./img/doctor-2.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Ana Sánchez</h3>
+                                    <h4 class="card-subtitle">Médico SC. en Salud Ocupacional</h4>
+                                    <a href="#" class="btn btn-outline-info">Ver más</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image-wrapper">
+                                    <img src="./img/doctor-3.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Carlos Salazar</h3>
+                                    <h4 class="card-subtitle">Médico SC. en Salud Ocupacional</h4>
+                                    <a href="#" class="btn btn-outline-info">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card">
+                                <div class="image-wrapper">
+                                    <img src="./img/doctor-2.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Ana Sánchez</h3>
+                                    <h4 class="card-subtitle">Médico SC. en Salud Ocupacional</h4>
+                                    <a href="#" class="btn btn-outline-info">Ver más</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image-wrapper">
+                                    <img src="./img/doctor-3.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Carlos Salazar</h3>
+                                    <h4 class="card-subtitle">Médico SC. en Salud Ocupacional</h4>
+                                    <a href="#" class="btn btn-outline-info">Ver más</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image-wrapper">
+                                    <img src="./img/doctor-1.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">María Ramirez</h3>
+                                    <h4 class="card-subtitle">Médico SC. en Salud Ocupacional</h4>
+                                    <a href="#" class="btn btn-outline-info">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card">
+                                <div class="image-wrapper">
+                                    <img src="./img/doctor-3.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Carlos Salazar</h3>
+                                    <h4 class="card-subtitle">Médico SC. en Salud Ocupacional</h4>
+                                    <a href="#" class="btn btn-outline-info">Ver más</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image-wrapper">
+                                    <img src="./img/doctor-1.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">María Ramirez</h3>
+                                    <h4 class="card-subtitle">Médico SC. en Salud Ocupacional</h4>
+                                    <a href="#" class="btn btn-outline-info">Ver más</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image-wrapper">
+                                    <img src="./img/doctor-2.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Ana Sánchez</h3>
+                                    <h4 class="card-subtitle">Médico SC. en Salud Ocupacional</h4>
+                                    <a href="#" class="btn btn-outline-info">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="./img/doctor-2.jpg" alt="Doctora en uniforme azul">
-                    <h4>Title</h4>
-                    <h5>Subtitle</h5>
-                </div>
-                <div>
-                    <img src="./img/doctor-3.jpg" alt="Doctora en uniforme blanco">
-                    <h4>Title</h4>
-                    <h5>Subtitle</h5>
-                </div>
-
-                <a href="">
-                    <img src="./img/flecha-derecha.png" alt="flecha hacia la derecha">
-                </a>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
-            <a href="./pages/personal.html" class="">Conoce a todo nuestro personal</a>
-
+            <a href="./pages/personal.html" class="btn btn-primary">Conoce a todo nuestro personal</a>
         </section>
 
         <section class="contacto">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.537896016313!2d-71.5993169170295!3d10.676915971727595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8998c702f7ee53%3A0x8ddd88f405cc2efb!2sSalud%20Ocupacional%20SOHICA!5e0!3m2!1ses!2sve!4v1729986813435!5m2!1ses!2sve"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contacto-contenedor">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.537896016313!2d-71.5993169170295!3d10.676915971727595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8998c702f7ee53%3A0x8ddd88f405cc2efb!2sSalud%20Ocupacional%20SOHICA!5e0!3m2!1ses!2sve!4v1729986813435!5m2!1ses!2sve"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-            <h2>Nuestra sede</h2>
+                <div class="contacto-info">
+                    <h2>Nuestro equipo está listo para ofrecerte la atención que mereces </h2>
 
-            <h3>Subtitle</h3>
+                    <p>Si tienes preguntas, necesitas más información sobre nuestros servicios o deseas programar una cita, no dudes en comunicarte con nosotros.<br><span>¡Hoy mismo da el primer paso hacia un ambiente laboral más saludable y seguro!</span></p>
 
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore id enim, beatae obcaecati laudantium
-                eius ducimus delectus deserunt a, quod quaerat nesciunt officia corrupti ex pariatur doloremque in, ad
-                dolor?</p>
-
-            <a href="./pages/contacto.html">Comunícate con nosotros</a>
+                    <a href="./pages/contacto.html" class="btn btn-primary">Contáctanos</a>
+                </div>
+            </div>
         </section>
 
     </main>
