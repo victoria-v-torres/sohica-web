@@ -1283,10 +1283,20 @@ footer {
 }
 
 @media screen and (max-width: 460px) {
+    /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
+    .quienes-somos div h2 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .quienes-somos div a {
+        width: 80%;
+        margin: 0 10% 0 10%;
+    }
 
     /*? INDEX: SECCIÓN ÁREAS DE TRABAJO */
     .salud-ocu-gestion-proc {
-        margin-bottom: 450px;
+        margin-bottom: 400px;
     }
 
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
