@@ -498,9 +498,12 @@ del contendor de Bootstrap*/
     background-image: url("../img/quienes-somos-banner.jpg");
 }
 
-.quienes-somos-instalaciones img {
-    height: 300px;
-    width: auto;
+.instalaciones {
+    margin: 100px 30px 100px 30px;
+}
+
+.instalaciones h2 {
+    margin-left: 40px;
 }
 
 .grid-galeria {
@@ -514,6 +517,11 @@ del contendor de Bootstrap*/
 
 .grid-galeria div {
     position: relative;
+}
+
+.grid-galeria div img {
+    height: 300px;
+    width: auto;
 }
 
 .grid-galeria div h3 {
