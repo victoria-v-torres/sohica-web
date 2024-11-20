@@ -593,32 +593,118 @@ del contendor de Bootstrap*/
     margin: 25px;
 }
 
-.quienes-somos div h2 {
-    width: fit-content;
-    margin: 10px;
-    padding: 10px;
-    font-size: 40px;
-    border-bottom: 4px solid #070707;
-}
-
-.quienes-somos div p {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.quienes-somos img {
-    width: 40%;
-    border-radius: 5px;
-}
-
 
 /**-------------------------------------------------------*/
 /**-----------------Estilos Pág. PERSONAL-----------------*/
 /**-------------------------------------------------------*/
 .banner-img-personal {
     background-image: url("../img/personal-banner.jpg");
+}
+
+.personal-medico,
+.personal-procesos {
+    margin: 100px 30px 100px 30px;
+}
+
+.directorio-info-1,
+.directorio-info-2 {
+    padding: 0 0 0 30px;
+}
+
+.directorio-info-1 h2 {
+    padding: 10px 10px 10px 0;
+    width: fit-content;
+    text-align: left;
+    border-bottom: 4px solid #28c728;
+}
+
+.directorio-info-1 p,
+.directorio-info-2 p {
+    width: 80%;
+    margin: 10px 0 0 0;
+}
+
+.directorio-info-2 h2 {
+    padding: 10px 10px 10px 0;
+    width: fit-content;
+    text-align: left;
+    border-bottom: 4px solid #3f9ac1;
+}
+
+.contenedor-cards {
+    padding: 0 30px 30px 30px;
+}
+
+.card-informativa-medico {
+    margin-top: 50px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #28c7286b;
+}
+
+.card-informativa-procesos {
+    margin-top: 50px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #3f9ac16d;
+}
+
+.card-informativa-medico img,
+.card-informativa-procesos img {
+    width: 350px;
+    margin: 25px;
+}
+
+.card-contenido-medico,
+.card-contenido-procesos {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+}
+
+.card-contenido h3 {
+    width: fit-content;
+    text-align: left;
+    padding: 5px;
+    border-bottom: 2px solid #28c728;
+}
+
+.card-contenido-procesos h3 {
+    width: fit-content;
+    text-align: left;
+    padding: 5px;
+    border-bottom: 2px solid #3f9ac1;
+}
+
+.redes-1-start,
+.redes-2-start
+ {
+    font-size: 30px;
+    display: flex;
+    justify-content: start;
+}
+
+.redes-1-end,
+.redes-2-end {
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+}
+
+.redes-1-start a i,
+.redes-1-end a i {
+    color: #28c728;
+    margin: 10px;
+}
+
+.redes-2-start a i,
+.redes-2-end a i {
+    color: #3f9ac1;
+    margin: 10px;
 }
 
 
