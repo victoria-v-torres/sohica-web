@@ -1,0 +1,210 @@
+/**-------------------------------------------------------*/
+/**-------------------Estilos del INDEX------------------*/
+/**-------------------------------------------------------*/
+
+/* +++++++++++++++++++++  Sección HERO  +++++++++++++++++ */
+
+.hero {
+    height: calc(100vh - 120px);
+    @extend %banner-propiedades-fijas;
+    background-image: url("../img/hero-1.jpg");
+    @include flexbox-propiedades(flex,column,center,center);
+}
+
+/* +++++++++++++++++++++  Sección ¿Quiénes somos?  +++++++++++++++++ */
+.quienes-somos {
+    margin: 100px 30px 100px 30px;
+    @include flexbox-propiedades(flex,row,center,center);
+    
+    div {
+        padding: 20px;
+        width: 55%;
+
+        h2 {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+    }
+
+    img {
+        width: 40%;
+        border-radius: 5px;
+    }
+}
+
+/* +++++++++++++++++++++  Sección Salud Ocupacional y Gestión de Seguridad de Procesos  +++++++++++++++++ */
+
+.salud-ocu-gestion-proc {
+    margin-top: 100px;
+    @include flexbox-propiedades(flex,column,center,center);
+
+    h2 {
+        padding: 0 0 20px 0;
+        margin: 40px 40px 0 40px;
+        text-align: center;
+
+        .texto-verde {
+            color: #2b8b12;
+        }
+
+        .texto-azul {
+            color: #0a78ab;
+        }
+    }
+
+    div {
+        height: 400px;
+        margin: 30px 0px 30px 0px;
+        display: flex;
+
+        .salud-ocupacional {
+            @include contenedor-salud-y-gestion(#00C300, "../img/salud-ocupacional-corta.png", left);
+            @include flexbox-propiedades(flex,row,right,center);
+
+            ul {
+                width: 75%;
+                padding: 20px;
+                margin: 30px;
+                background-color: #0c780ca1;
+
+                li {
+                    font-size: 20px;
+                    margin: 20px;
+                    color: white;
+                }
+            }
+        }
+        .gestion-procesos {
+            @include contenedor-salud-y-gestion(#00A0E3, "../img/gestion-procesos-corta.png", right);
+            @include flexbox-propiedades(flex,row,left,center);
+
+            ul {
+                width: 75%;
+                padding: 20px;
+                margin: 20px;
+                background-color: #03658f84;
+
+                li {
+                    font-size: 20px;
+                    margin: 15px;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+/* +++++++++++++++++++++  Sección Servicios  +++++++++++++++++ */
+
+.servicios {
+    margin: 50px 0 50px 0;
+    padding: 20px;
+    width: 100%;
+
+    h2 {
+        width: fit-content;
+        margin: 10px 10px 10px 40px;
+        padding: 10px;
+        font-size: 40px;
+        border-bottom: 4px solid #070707;
+    }
+
+    .servicios-contenedor {
+        @include flexbox-propiedades(flex,column,center,center);
+
+        .grid-servicios {
+            width: 100%;
+            padding: 30px;
+            @extend %grid-propiedades-3col;
+            gap: 10px;
+            justify-items: center;
+            align-items: center;
+
+            .grid-servicios-item {
+                width: 100%;
+                height: 100%;
+                margin: 30px;
+
+                a {
+                    height: 100%;
+                    @include flexbox-propiedades(flex,column,center,center);
+                    text-align: center;
+                    text-decoration: none;
+
+                    img {
+                        width: auto;
+                        height: 60%;
+                    }
+
+                    h3 {
+                        margin-top: 10px;
+                        height: 40%;
+                        color: #122027;
+                        font-size: 30px;
+                        
+                    }
+                }
+
+                &:hover {
+                    background-color: #00c30052;
+                }
+            }
+        }
+    }
+}
+
+
+/* +++++++++++++++++++++  Sección Personal  +++++++++++++++++ */
+
+.personal {
+    margin-top: 40px;
+    padding: 20px;
+    @include flexbox-propiedades(flex,column,center,center);
+
+    h2 {
+        margin: 10px;
+        padding: 10px;
+    }
+
+}
+
+/* +++++++++++++++++++++  Sección Contácto  +++++++++++++++++ */
+
+.contacto {
+    padding: 60px;
+    width: 100%;
+    @include flexbox-propiedades(flex,row,space-between,center);
+
+    iframe {
+        border-radius: 5px;
+        margin: 40px
+    }
+
+    div {
+        margin: 20px;
+        padding: 40px;
+        text-align: left;
+        @include flexbox-propiedades(flex,column,center,center);
+        
+        h2 {
+            padding: 10px;
+            margin: 10px 10px 15px 10px;
+            text-align: left;
+
+        }
+
+        p {
+            padding: 0px 10px 0 10px;
+            
+            span {
+                font-weight: bold;
+             }   
+        }
+    }
+}

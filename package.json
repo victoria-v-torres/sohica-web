@@ -1,0 +1,11 @@
+{
+  "name": "proyecto-coder-victoria-torres",
+  "version": "1.0.0",
+  "description": "Se desarrolla una web para presentar la clínica a potenciales clientes, abarcando información importante de la misma y sus servicios, personal, ubicación e información de contacto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

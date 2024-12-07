@@ -1,0 +1,36 @@
+/**---------------------------------------------------------------*/
+/**------------------- Estilos de pág. CONTACTO ------------------*/
+/**---------------------------------------------------------------*/
+
+.banner-img-contacto {
+    background-image: url("../img/contacto-banner.jpg");
+}
+
+.contacto-mapa-form {
+    @include flexbox-propiedades(flex,row,space-around,center);
+    margin: 100px 30px 100px 30px;
+    padding: 10px;
+
+    .mapa {
+        width: 40%;
+        @include flexbox-propiedades(flex,column,center,center);
+
+        h2 {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        iframe {
+            margin: 10px;
+        }
+    }
+
+    .formulario {
+        @include flexbox-propiedades(flex,column,center,center);
+        width: 500px;
+        padding: 20px 0 0 0;
+        background-color: #009fe317;
+        border: 1px solid #00A0E3;
+        border-radius: 5px;
+    }
+}

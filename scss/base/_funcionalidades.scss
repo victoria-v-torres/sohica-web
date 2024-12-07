@@ -1,0 +1,90 @@
+/**-------------------------------------------------------*/
+/**----------------------- VARIABLES ---------------------*/
+/**-------------------------------------------------------*/
+
+
+$color-header: #d8f7cb;
+$color-bg-page:#edf7fd;
+$color-footer: #c0ddea;
+
+$color-btn-text: white;
+
+$color-btn-primary: #00b400;
+$color-btn-primary-hover: #0b750b;
+
+$color-btn-outline-primary: #33e733;
+$color-btn-outline-primary-hover: #00b400;
+
+$color-btn-outline-info: #0278ab;
+$color-btn-outline-info-hover: #075170;
+
+
+/**-------------------------------------------------------*/
+/**------------------------ LISTAS -----------------------*/
+/**-------------------------------------------------------*/
+
+/*Lista con las imagenes de la HERO y los banners de página*/
+$imagenes: "../img/hero-1.jpg", "../img/quienes-somos-banner.jpg", "../img/servicios-banner.jpg" ,"../img/personal-banner.jpg",  "../img/contacto-banner.jpg";
+
+
+/**-------------------------------------------------------*/
+/**------------------------ EXTENDS ----------------------*/
+/**-------------------------------------------------------*/
+
+%btn-propiedades-fijas {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+%banner-propiedades-fijas {
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+%grid-propiedades-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+}
+
+
+/**-------------------------------------------------------*/
+/**------------------------ MIXINS -----------------------*/
+/**-------------------------------------------------------*/
+
+
+@mixin flexbox-propiedades($display,$direction,$justify,$align){
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+/*Mixin con propiedades para rellenar botones "filled" con diferentes colores*/
+@mixin btn-fill-color($color-principal,$color-texto){
+    background-color: $color-principal;
+    color: $color-texto;
+    border: 1px solid $color-principal;
+}
+
+/*Mixin con propiedades para rellenar botones "outlined" con diferentes colores*/
+@mixin btn-outline-color($color-principal){
+    border: 1px solid $color-principal;
+    color: $color-principal;
+}
+
+
+/*Mixin con propiedades de los contendores del INDEX con info de salud ocupacional
+y gestion de seguridad de procesos*/
+@mixin contenedor-salud-y-gestion($bg-color, $imagen, $posicion) {
+    width: 50%;
+    background-color: $bg-color;
+    background-image: url($imagen);
+    background-position: $posicion;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}

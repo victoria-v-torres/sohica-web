@@ -1,0 +1,1056 @@
+@charset "UTF-8";
+/**-------------------------------------------------------*/
+/**----------------------- VARIABLES ---------------------*/
+/**-------------------------------------------------------*/
+/**-------------------------------------------------------*/
+/**------------------------ LISTAS -----------------------*/
+/**-------------------------------------------------------*/
+/*Lista con las imagenes de la HERO y los banners de página*/
+/**-------------------------------------------------------*/
+/**------------------------ EXTENDS ----------------------*/
+/**-------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+.btn-outline-info, .btn-outline-primary, .btn-primary {
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.hero, .banner {
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.servicios .servicios-contenedor .grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+}
+
+/**-------------------------------------------------------*/
+/**------------------------ MIXINS -----------------------*/
+/**-------------------------------------------------------*/
+/*Mixin con propiedades para rellenar botones "filled" con diferentes colores*/
+/*Mixin con propiedades para rellenar botones "outlined" con diferentes colores*/
+/*Mixin con propiedades de los contendores del INDEX con info de salud ocupacional
+y gestion de seguridad de procesos*/
+/* Aplicamos al "Selector Universal" un RESET para reiniciar valores por defecto*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sarabun", serif;
+  font-weight: 400;
+  background-color: #edf7fd;
+}
+body h1 {
+  font-size: 60px;
+}
+body h2 {
+  width: fit-content;
+  font-size: 40px;
+  border-bottom: 4px solid black;
+}
+body p {
+  font-size: 20px;
+}
+
+/*Clase para dimensionar el logo de la clínica tanto en el header como en el footer*/
+.logo {
+  width: 10em;
+  /*width: 2.5em; con el logo pequeño*/
+}
+
+/**-------------------------------------------------------*/
+/**------------------------ BANNERS ----------------------*/
+/**-------------------------------------------------------*/
+/*Conjunto de clases que dan estilos a los "banners" de
+presentación de las páginas de la web y a su información
+(la info de la Hero Section usa la clase "banner-info"
+también)*/
+.banner {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-info {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.648);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner-info h1 {
+  padding: 10px;
+  color: white;
+  border-bottom: 4px solid white;
+}
+.banner-info p {
+  width: 75%;
+  color: white;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+.banner-info div {
+  display: flex;
+  justify-content: center;
+}
+
+/**-------------------------------------------------------*/
+/**----------------------- BOOTSTRAP ---------------------*/
+/**-------------------------------------------------------*/
+/* +++++++++++++++++++++  En el HEADER: NAVBAR  +++++++++++++++++ */
+/*Disminuye el tamaño del contenedor del logo de la navbar de Bootstrap*/
+.navbar-brand {
+  width: 46%;
+}
+
+/*Cambia el ancho del "ul" del navbar para que ocupe el 100% del ancho
+del contendor de Bootstrap*/
+.navbar-nav {
+  width: 100%;
+}
+
+/*Cambia el color del hover de los links de la navbar de Bootstrap*/
+.nav-link:hover {
+  color: #1085b6;
+}
+
+/*Cambia el color del link "activo" de la navbar de Bootstrap*/
+.active {
+  color: #0a78ab !important;
+}
+
+/*Cambiar el color del borde del botón de menú hamburguesa de Bootstrap*/
+.navbar-toggler {
+  border: 1px solid rgba(32, 137, 182, 0.968627451);
+}
+
+/* +++++++++++++++++++++  En el INDEX: BOTONES  +++++++++++++++++ */
+/*Cambio de los colores de botones de Bootstrap y su hover*/
+.btn-primary {
+  background-color: #00b400;
+  color: white;
+  border: 1px solid #00b400;
+}
+.btn-primary:hover {
+  background-color: #0b750b;
+  border: 1px solid #0b750b;
+}
+
+.btn-outline-primary {
+  border: 1px solid #33e733;
+  color: #33e733;
+}
+.btn-outline-primary:hover {
+  background-color: #00b400;
+  color: white;
+  border: 1px solid #00b400;
+}
+
+.btn-outline-info {
+  border: 1px solid #0278ab;
+  color: #0278ab;
+}
+.btn-outline-info:hover {
+  background-color: #075170;
+  color: white;
+  border: 1px solid #075170;
+}
+
+/* +++++++++++++++++++++  En el INDEX: CARDS Y CARRUSEL  +++++++++++++++++ */
+/*Modificaciones a las clases de las card de Bootstrap */
+.card {
+  margin: 0 1em;
+  background-color: #a0f5a0;
+  width: 23.3333333333%;
+}
+.card .image-wrapper {
+  width: auto;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+}
+.card .image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0.375rem 0.375rem 0rem 0rem;
+}
+.card .card-body {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card .card-body .card-title {
+  padding: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #0a78ab;
+  color: #122027;
+  font-size: 30px;
+}
+.card .card-body .card-subtitle {
+  padding: 5px;
+  margin-bottom: 15px;
+  color: rgb(68, 86, 85);
+  font-size: 20px;
+}
+.card:hover {
+  top: -6px;
+  background-color: #e0f5e0;
+  box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
+  -webkit-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
+  -moz-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
+}
+
+/*Modificaciones a las clases del carrusel de Bootstrap*/
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(2, 120, 171, 0.0745098039);
+}
+
+.carousel-inner {
+  width: 100%;
+  margin: 30px 0px 30px 0px;
+  padding: 10px;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* +++++++++++++++++++++  En CONTACTO: FORMULARIO +++++++++++++++++ */
+/*Modificaciones a las clases del formulario de Bootstrap*/
+form {
+  width: 100%;
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+form div {
+  width: 80%;
+}
+
+/*Cambia el color del "focus" de los inputs de Bootstrap*/
+.form-control:focus {
+  border-color: #33e733;
+  box-shadow: 0 0 0 0.25rem rgba(2, 159, 2, 0.3098039216);
+}
+
+.form-botones {
+  display: flex;
+  justify-content: center;
+}
+
+/*Cambia los márgenes de los botones de Bootstrap*/
+.form-botones button {
+  margin: 0px 10px 0px 10px;
+}
+
+/**-------------------------------------------------------*/
+/**-------------------Estilos del HEADER------------------*/
+/**-------------------------------------------------------*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.5);
+  -webkit-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.5);
+  -moz-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.5);
+  /*Cambia el color de fondo de la navbar*/
+}
+header nav {
+  background-color: #d8f7cb;
+}
+
+/**-------------------------------------------------------*/
+/**-------------------Estilos del FOOTER------------------*/
+/**-------------------------------------------------------*/
+footer {
+  background-color: #c0ddea;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+footer .footer-info div {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+footer .footer-info div p {
+  font-size: 15px;
+}
+footer .footer-info div p i {
+  margin-right: 5px;
+  color: #0587bf;
+}
+footer .footer-redes-sociales {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+footer .footer-redes-sociales h2 {
+  margin-bottom: 20px;
+  border-bottom: none;
+}
+footer .footer-redes-sociales div {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+footer .footer-redes-sociales div a i {
+  margin: 10px;
+  padding: 5px;
+  font-size: 35px;
+  color: #0587bf;
+}
+
+/**-------------------------------------------------------*/
+/**-------------------Estilos del INDEX------------------*/
+/**-------------------------------------------------------*/
+/* +++++++++++++++++++++  Sección HERO  +++++++++++++++++ */
+.hero {
+  height: calc(100vh - 120px);
+  background-image: url("../img/hero-1.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* +++++++++++++++++++++  Sección ¿Quiénes somos?  +++++++++++++++++ */
+.quienes-somos {
+  margin: 100px 30px 100px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.quienes-somos div {
+  padding: 20px;
+  width: 55%;
+}
+.quienes-somos div h2 {
+  margin: 10px;
+  padding: 10px;
+}
+.quienes-somos div p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+.quienes-somos img {
+  width: 40%;
+  border-radius: 5px;
+}
+
+/* +++++++++++++++++++++  Sección Salud Ocupacional y Gestión de Seguridad de Procesos  +++++++++++++++++ */
+.salud-ocu-gestion-proc {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.salud-ocu-gestion-proc h2 {
+  padding: 0 0 20px 0;
+  margin: 40px 40px 0 40px;
+  text-align: center;
+}
+.salud-ocu-gestion-proc h2 .texto-verde {
+  color: #2b8b12;
+}
+.salud-ocu-gestion-proc h2 .texto-azul {
+  color: #0a78ab;
+}
+.salud-ocu-gestion-proc div {
+  height: 400px;
+  margin: 30px 0px 30px 0px;
+  display: flex;
+}
+.salud-ocu-gestion-proc div .salud-ocupacional {
+  width: 50%;
+  background-color: #00C300;
+  background-image: url("../img/salud-ocupacional-corta.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+}
+.salud-ocu-gestion-proc div .salud-ocupacional ul {
+  width: 75%;
+  padding: 20px;
+  margin: 30px;
+  background-color: rgba(12, 120, 12, 0.631372549);
+}
+.salud-ocu-gestion-proc div .salud-ocupacional ul li {
+  font-size: 20px;
+  margin: 20px;
+  color: white;
+}
+.salud-ocu-gestion-proc div .gestion-procesos {
+  width: 50%;
+  background-color: #00A0E3;
+  background-image: url("../img/gestion-procesos-corta.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.salud-ocu-gestion-proc div .gestion-procesos ul {
+  width: 75%;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(3, 101, 143, 0.5176470588);
+}
+.salud-ocu-gestion-proc div .gestion-procesos ul li {
+  font-size: 20px;
+  margin: 15px;
+  color: white;
+}
+
+/* +++++++++++++++++++++  Sección Servicios  +++++++++++++++++ */
+.servicios {
+  margin: 50px 0 50px 0;
+  padding: 20px;
+  width: 100%;
+}
+.servicios h2 {
+  width: fit-content;
+  margin: 10px 10px 10px 40px;
+  padding: 10px;
+  font-size: 40px;
+  border-bottom: 4px solid #070707;
+}
+.servicios .servicios-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.servicios .servicios-contenedor .grid-servicios {
+  width: 100%;
+  padding: 30px;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+.servicios .servicios-contenedor .grid-servicios .grid-servicios-item {
+  width: 100%;
+  height: 100%;
+  margin: 30px;
+}
+.servicios .servicios-contenedor .grid-servicios .grid-servicios-item a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+.servicios .servicios-contenedor .grid-servicios .grid-servicios-item a img {
+  width: auto;
+  height: 60%;
+}
+.servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
+  margin-top: 10px;
+  height: 40%;
+  color: #122027;
+  font-size: 30px;
+}
+.servicios .servicios-contenedor .grid-servicios .grid-servicios-item:hover {
+  background-color: rgba(0, 195, 0, 0.3215686275);
+}
+
+/* +++++++++++++++++++++  Sección Personal  +++++++++++++++++ */
+.personal {
+  margin-top: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.personal h2 {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* +++++++++++++++++++++  Sección Contácto  +++++++++++++++++ */
+.contacto {
+  padding: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacto iframe {
+  border-radius: 5px;
+  margin: 40px;
+}
+.contacto div {
+  margin: 20px;
+  padding: 40px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto div h2 {
+  padding: 10px;
+  margin: 10px 10px 15px 10px;
+  text-align: left;
+}
+.contacto div p {
+  padding: 0px 10px 0 10px;
+}
+.contacto div p span {
+  font-weight: bold;
+}
+
+/**---------------------------------------------------------------*/
+/**------------------- Estilos de pág. CONTACTO ------------------*/
+/**---------------------------------------------------------------*/
+.banner-img-contacto {
+  background-image: url("../img/contacto-banner.jpg");
+}
+
+.contacto-mapa-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px 30px 100px 30px;
+  padding: 10px;
+}
+.contacto-mapa-form .mapa {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-mapa-form .mapa h2 {
+  margin: 10px;
+  padding: 10px;
+}
+.contacto-mapa-form .mapa iframe {
+  margin: 10px;
+}
+.contacto-mapa-form .formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  padding: 20px 0 0 0;
+  background-color: rgba(0, 159, 227, 0.0901960784);
+  border: 1px solid #00A0E3;
+  border-radius: 5px;
+}
+
+/*! ********************************************************************/
+/*! *************************** MEDIA QUERIES **************************/
+/*! ********************************************************************/
+@media screen and (max-width: 1150px) {
+  /*?---------- CONTACTO ----------*/
+  .contacto-mapa-form .formulario {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 1075px) {
+  /*?---------- INDEX: SECCIÓN ÁREAS DE TRABAJO ----------*/
+  .salud-ocu-gestion-proc h2 {
+    margin: 40px 60px 0 60px;
+    font-size: 35px;
+  }
+  .salud-ocu-gestion-proc div {
+    height: 500px;
+  }
+  .salud-ocu-gestion-proc div .salud-ocupacional {
+    justify-content: center;
+  }
+  .salud-ocu-gestion-proc div .salud-ocupacional ul {
+    width: 80%;
+  }
+  .salud-ocu-gestion-proc div .gestion-procesos {
+    justify-content: center;
+  }
+  .salud-ocu-gestion-proc div .gestion-procesos ul {
+    width: 80%;
+  }
+  /*?---------- INDEX: SECCIÓN SERVICIOS ----------*/
+  .servicios .servicios-contenedor .grid-servicios .grid-servicios-item {
+    width: 90%;
+    height: 90%;
+  }
+  .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a img {
+    height: 60%;
+  }
+  .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
+    font-size: 25px;
+  }
+  /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
+  .card .card-body .card-title {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 970px) {
+  /*?----------INDEX: SERVICIOS GRID ----------*/
+  .servicios .servicios-contenedor .grid-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /*?---------- INDEX: CARRUSEL PERSONAL ----------*/
+  .card {
+    width: 35%;
+  }
+  .card:nth-child(3) {
+    display: none;
+  }
+  .card .image-wrapper {
+    /*height: 16vw;*/
+    width: auto;
+  }
+  /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
+  .contacto div h2 {
+    font-size: 35px;
+  }
+  /*?----------PÁGINA CONTACTO ----------*/
+  .contacto-mapa-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .contacto-mapa-form .mapa iframe {
+    width: 550px;
+    height: 450px;
+  }
+  .contacto-mapa-form .formulario {
+    width: 550px;
+    margin-top: 60px;
+  }
+  .contacto-mapa-form .formulario h2 {
+    text-align: center;
+  }
+  /*?---------- FOOTER ----------*/
+  footer .footer-redes-sociales h2 {
+    font-size: 25px;
+  }
+  footer .footer-redes-sociales div a i {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 940px) {
+  /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
+  .contacto div h2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 876px) {
+  /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
+  .contacto div h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 855px) {
+  /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
+  .quienes-somos {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .quienes-somos div {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .quienes-somos div h2 {
+    width: 70%;
+    margin: 0 15% 0 15%;
+  }
+  .quienes-somos div a {
+    width: 40%;
+    margin: 0 30% 0 30%;
+  }
+  .quienes-somos img {
+    width: 100%;
+    margin-top: 40px;
+  }
+  /*?----------INDEX: SECCIÓN ÁREAS DE TRABAJO ----------*/
+  .salud-ocu-gestion-proc {
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+  }
+  .salud-ocu-gestion-proc div {
+    flex-direction: column;
+  }
+  .salud-ocu-gestion-proc div .salud-ocupacional {
+    width: 100%;
+    justify-content: right;
+  }
+  .salud-ocu-gestion-proc div .gestion-procesos {
+    width: 100%;
+    justify-content: left;
+  }
+  /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+  .servicios h2 {
+    width: 70%;
+    margin: 10px 15% 10px 15%;
+    text-align: center;
+  }
+  .servicios .servicios-contenedor .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+  .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a img {
+    height: 70%;
+  }
+  .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
+    width: 60%;
+  }
+  /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
+  .personal h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .card {
+    width: 60%;
+  }
+  .card:not(:first-child) {
+    display: none;
+  }
+  /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
+  .contacto {
+    flex-direction: column;
+  }
+  .contacto iframe {
+    width: 550px;
+    height: 450px;
+  }
+  .contacto div h2 {
+    text-align: center;
+    font-size: 35px;
+  }
+  .contacto div p {
+    width: 100%;
+    text-align: center;
+  }
+  /*?----------PÁGINA CONTACTO ----------*/
+  .contacto-mapa-form .mapa iframe {
+    width: 550px;
+    height: 450px;
+  }
+  .contacto-mapa-form .formulario {
+    width: 550px;
+    margin-top: 60px;
+  }
+  .contacto-mapa-form .formulario h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 675px) {
+  /*? INDEX: SECCIÓN HERO */
+  .hero {
+    height: calc(100vh - 75px);
+  }
+  /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
+  .quienes-somos div h2 {
+    width: 80%;
+    margin: 0 10% 0 10%;
+    font-size: 30px;
+  }
+  /*? INDEX: SECCIÓN ÁREAS DE TRABAJO */
+  .salud-ocu-gestion-proc {
+    margin-bottom: 300px;
+  }
+  .salud-ocu-gestion-proc div .salud-ocupacional {
+    justify-content: center;
+  }
+  .salud-ocu-gestion-proc div .gestion-procesos {
+    justify-content: center;
+  }
+  /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
+  .contacto iframe {
+    width: 450px;
+    height: 350px;
+  }
+  /*?---------- PÁGINA CONTACTO ----------*/
+  .banner {
+    height: 350px;
+  }
+  .banner-info h1 {
+    font-size: 50px;
+  }
+  .contacto-mapa-form .mapa iframe {
+    width: 450px;
+    height: 350px;
+  }
+  .contacto-mapa-form .formulario {
+    width: 450px;
+  }
+  /*?---------- FOOTER ----------*/
+  footer .footer-info img {
+    width: 180px;
+  }
+  footer .footer-info div p {
+    font-size: 15px;
+  }
+  footer .footer-redes-sociales h2 {
+    font-size: 20px;
+  }
+  footer .footer-redes-sociales div a i {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 625px) {
+  /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
+  .contacto div h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 550px) {
+  /*? INDEX: SECCIÓN HERO */
+  .hero {
+    height: calc(100vh - 60px);
+  }
+  .banner-info p {
+    font-size: 15px;
+  }
+  /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
+  .quienes-somos div h2 {
+    width: 70%;
+    margin: 0 15% 0 15%;
+    font-size: 25px;
+  }
+  .quienes-somos div p {
+    font-size: 15px;
+  }
+  .quienes-somos div a {
+    width: 50%;
+    margin: 0 25% 0 25%;
+  }
+  /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+  .servicios h2 {
+    font-size: 25px;
+  }
+  .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a img {
+    height: 60%;
+  }
+  .servicios .servicios-contenedor .grid-servicios .grid-servicios-item h3 {
+    width: 100%;
+    font-size: 20px;
+  }
+  /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
+  .personal h2 {
+    font-size: 25px;
+  }
+  .card .card-body .card-title {
+    font-size: 20px;
+  }
+  .card .card-body .card-subtitle {
+    font-size: 16px;
+  }
+  /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
+  .contacto iframe {
+    width: 350px;
+    height: 250px;
+  }
+  .contacto div {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  /*?---------- PÁGINA CONTACTO ----------*/
+  .banner-info h1 {
+    font-size: 40px;
+  }
+  .contacto-mapa-form .mapa h2 {
+    font-size: 30px;
+  }
+  .contacto-mapa-form .mapa iframe {
+    width: 350px;
+    height: 250px;
+  }
+  .contacto-mapa-form .formulario {
+    width: 350px;
+  }
+  .contacto-mapa-form .formulario h2 {
+    font-size: 30px;
+  }
+  /*?---------- FOOTER ----------*/
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-info {
+    align-items: center;
+  }
+  footer .footer-info div {
+    text-align: center;
+  }
+  footer .footer-redes-sociales {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 460px) {
+  /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
+  .quienes-somos div h2 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .quienes-somos div a {
+    width: 80%;
+    margin: 0 10% 0 10%;
+  }
+  /*? INDEX: SECCIÓN ÁREAS DE TRABAJO */
+  .salud-ocu-gestion-proc {
+    margin-bottom: 400px;
+  }
+  /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
+  .contacto iframe {
+    width: 250px;
+    height: 150px;
+  }
+  /*?---------- PÁGINA CONTACTO ----------*/
+  .banner {
+    height: 400px;
+  }
+  .banner-info h1 {
+    font-size: 35px;
+  }
+  .contacto-mapa-form .mapa h2 {
+    font-size: 25px;
+  }
+  .contacto-mapa-form .mapa iframe {
+    width: 300px;
+    height: 300px;
+  }
+  .contacto-mapa-form .formulario {
+    width: 300px;
+  }
+  .contacto-mapa-form .formulario h2 {
+    width: 80%;
+  }
+  /*?---------- FOOTER ----------*/
+  footer .footer-info img {
+    width: 150px;
+  }
+  footer .footer-info div p {
+    font-size: 12px;
+  }
+  footer .footer-redes-sociales h2 {
+    font-size: 20px;
+  }
+  footer .footer-redes-sociales div a i {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  /*? INDEX: SECCIÓN HERO */
+  .banner-info h1 {
+    font-size: 30px;
+  }
+  /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
+  .quienes-somos div h2 {
+    width: 100%;
+    margin: 0;
+    font-size: 25px;
+  }
+  .quienes-somos div a {
+    width: 80%;
+    margin: 0 10% 0 10%;
+  }
+  /*?----------INDEX: SECCIÓN ÁREA DE TRABAJO ----------*/
+  .salud-ocu-gestion-proc {
+    margin-bottom: 200px;
+  }
+  .salud-ocu-gestion-proc h2 {
+    font-size: 25px;
+  }
+  .salud-ocu-gestion-proc div .salud-ocupacional ul li {
+    font-size: 15px;
+  }
+  .salud-ocu-gestion-proc div .gestion-procesos ul li {
+    font-size: 15px;
+  }
+  /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+  .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
+    width: 100%;
+    font-size: 20px;
+  }
+  /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
+  .contacto {
+    padding: 40px 40px 60px 40px;
+  }
+  .contacto iframe {
+    width: 250px;
+    height: 200px;
+  }
+  .contacto div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  /*?---------- PÁGINA CONTACTO ----------*/
+  .banner {
+    height: 450px;
+  }
+  .banner-info h1 {
+    font-size: 35px;
+  }
+  .contacto-mapa-form .mapa h2 {
+    font-size: 25px;
+  }
+  .contacto-mapa-form .mapa iframe {
+    width: 250px;
+    height: 200px;
+  }
+  .contacto-mapa-form .formulario {
+    width: 250px;
+  }
+  .contacto-mapa-form .formulario h2 {
+    font-size: 25px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

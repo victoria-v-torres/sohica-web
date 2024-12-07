@@ -1,0 +1,57 @@
+/**-------------------------------------------------------*/
+/**-------------------Estilos del FOOTER------------------*/
+/**-------------------------------------------------------*/
+
+footer {
+    background-color: $color-footer;
+    padding: 20px;
+    display: flex;
+    justify-content:space-around;
+
+    .footer-info {
+        padding: 10px;
+        @include flexbox-propiedades(flex,column,left,left);
+
+        div {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+
+            p {
+                font-size: 15px;
+
+                i {
+                    margin-right: 5px;
+                    color: #0587bf;
+                }
+            }
+        }
+    }
+
+    .footer-redes-sociales {
+        padding: 10px;
+        @include flexbox-propiedades(flex,column,left,left);
+
+        h2 {
+            margin-bottom: 20px;
+            border-bottom: none;
+        }
+
+        div {
+            width: 30%;
+            height: auto;
+            @include flexbox-propiedades(flex,row,left,center);
+
+            a {
+
+                i {
+                    margin: 10px;
+                    padding: 5px;
+                    font-size: 35px;
+                    color: #0587bf;
+                }
+            }
+        }
+    }
+
+}

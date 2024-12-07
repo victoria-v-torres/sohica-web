@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Aplicamos al "Selector Universal" un RESET para reiniciar valores por defecto*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sarabun", serif;
+    font-weight: 400;
+    background-color: $color-bg-page;
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        width: fit-content;
+        font-size: 40px;
+        border-bottom: 4px solid black;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+/*Clase para dimensionar el logo de la clínica tanto en el header como en el footer*/
+.logo {
+    width: 10em;
+    /*width: 2.5em; con el logo pequeño*/
+}
+
+/**-------------------------------------------------------*/
+/**------------------------ BANNERS ----------------------*/
+/**-------------------------------------------------------*/
+
+
+/*Conjunto de clases que dan estilos a los "banners" de
+presentación de las páginas de la web y a su información
+(la info de la Hero Section usa la clase "banner-info"
+también)*/
+
+.banner {
+    height: 300px;
+    @extend %banner-propiedades-fijas;
+    @include flexbox-propiedades(flex,column,center,center);
+}
+
+.banner-info {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.648);
+    @include flexbox-propiedades(flex,column,center,center);
+
+    h1 {
+        padding: 10px;
+        color: white;
+        border-bottom: 4px solid white;
+    }
+
+    p {
+        width: 75%;
+        color: white;
+        padding: 20px;
+        margin-bottom: 5px;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/**-------------------------------------------------------*/
+/**----------------------- BOOTSTRAP ---------------------*/
+/**-------------------------------------------------------*/
+
+
+/* +++++++++++++++++++++  En el HEADER: NAVBAR  +++++++++++++++++ */
+
+
+/*Disminuye el tamaño del contenedor del logo de la navbar de Bootstrap*/
+.navbar-brand {
+    width: 46%;
+}
+
+/*Cambia el ancho del "ul" del navbar para que ocupe el 100% del ancho
+del contendor de Bootstrap*/
+.navbar-nav {
+    width: 100%;
+}
+
+/*Cambia el color del hover de los links de la navbar de Bootstrap*/
+.nav-link:hover {
+    color: #1085b6;
+}
+
+/*Cambia el color del link "activo" de la navbar de Bootstrap*/
+.active {
+    color: #0a78ab !important;
+}
+
+/*Cambiar el color del borde del botón de menú hamburguesa de Bootstrap*/
+.navbar-toggler {
+    border: 1px solid #2089b6f7;
+}
+
+
+/* +++++++++++++++++++++  En el INDEX: BOTONES  +++++++++++++++++ */
+
+
+/*Cambio de los colores de botones de Bootstrap y su hover*/
+.btn-primary {
+    @extend %btn-propiedades-fijas;
+    @include btn-fill-color($color-btn-primary,$color-btn-text);
+
+    &:hover {
+        background-color: $color-btn-primary-hover;
+        border: 1px solid $color-btn-primary-hover;
+    }
+}
+
+.btn-outline-primary {
+    @extend %btn-propiedades-fijas;
+    @include btn-outline-color($color-btn-outline-primary);
+
+    &:hover {
+        @include btn-fill-color($color-btn-outline-primary-hover,$color-btn-text);
+    }
+}
+
+.btn-outline-info {
+    @extend %btn-propiedades-fijas;
+    @include btn-outline-color($color-btn-outline-info);
+
+    &:hover {
+        @include btn-fill-color($color-btn-outline-info-hover,$color-btn-text);
+    }
+}
+
+
+/* +++++++++++++++++++++  En el INDEX: CARDS Y CARRUSEL  +++++++++++++++++ */
+
+
+/*Modificaciones a las clases de las card de Bootstrap */
+
+.card {
+    margin: 0 1em;
+    background-color: #a0f5a0;
+    width: calc(70%/3);
+
+    .image-wrapper {
+        width: auto;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 0.375rem 0.375rem 0rem 0rem;
+        }
+    }
+
+    .card-body {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        @include flexbox-propiedades(flex,column,center,center);
+
+        .card-title {
+            padding: 5px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #0a78ab;
+            color: #122027;
+            font-size: 30px;
+        }
+
+        .card-subtitle {
+            padding: 5px;
+            margin-bottom: 15px;
+            color: rgb(68, 86, 85);
+            font-size: 20px;
+        }
+    }
+
+    &:hover {
+        top: -6px;
+        background-color: #e0f5e0;
+        box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
+        -webkit-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
+        -moz-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
+    }
+}
+
+/*Modificaciones a las clases del carrusel de Bootstrap*/
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #0278ab13;
+}
+
+.carousel-inner {
+    width: 100%;
+    margin: 30px 0px 30px 0px;
+    padding: 10px;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* +++++++++++++++++++++  En CONTACTO: FORMULARIO +++++++++++++++++ */
+
+
+/*Modificaciones a las clases del formulario de Bootstrap*/
+form {
+    width: 100%;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+    div {
+        width: 80%;
+    }
+}
+
+/*Cambia el color del "focus" de los inputs de Bootstrap*/
+.form-control:focus {
+    border-color: #33e733;
+    box-shadow: 0 0 0 0.25rem #029f024f;
+}
+
+.form-botones {
+    display: flex;
+    justify-content: center;
+}
+
+/*Cambia los márgenes de los botones de Bootstrap*/
+.form-botones button {
+    margin: 0px 10px 0px 10px;
+}
