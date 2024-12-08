@@ -1,0 +1,43 @@
+/**--------------------------------------------------------------------------*/
+/**-------------------- Estilos de pág. ¿QUIENES SOMOS? ---------------------*/
+/**--------------------------------------------------------------------------*/
+
+.banner-img-quienes-somos {
+    background-image: url("../img/quienes-somos-banner.jpg");
+}
+
+.instalaciones {
+    margin: 100px 30px 100px 30px;
+
+    h2 {
+        margin-left: 40px;
+    }
+
+    .grid-galeria {
+        @extend %grid-propiedades-3col;
+        gap: 15px;
+        margin: 40px;
+
+        div {
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .galeria-img-1 {
+            grid-column: span 2;
+        }
+        
+        .galeria-img-2 {
+            grid-row: span 2;
+        }
+        
+        .galeria-img-3 {
+            grid-row: span 2;
+        }
+    }
+
+}

@@ -44,7 +44,7 @@ presentación de las páginas de la web y a su información
 también)*/
 
 .banner {
-    height: 300px;
+    height: 350px;
     @extend %banner-propiedades-fijas;
     @include flexbox-propiedades(flex,column,center,center);
 }

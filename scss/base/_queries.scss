@@ -84,7 +84,7 @@
 
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
     .contacto div h2 {
-        font-size: 35px
+        font-size: 35px;
     }
 
 
@@ -123,7 +123,7 @@
 
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
     .contacto div h2 {
-        font-size: 32px
+        font-size: 32px;
     }
 
 }
@@ -135,7 +135,7 @@
 
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
     .contacto div h2 {
-        font-size: 28px
+        font-size: 28px;
     }
 }
 
@@ -242,6 +242,36 @@
         text-align: center;
     }
 
+    /*?---------- PÁGINA ¿QUIÉNES SOMOS? ----------*/
+    .contenedor-quienes-somos {
+        .quienes-somos {
+            div {
+                margin: 100px 0 0 0;
+            }
+
+            &:nth-child(1) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    .instalaciones .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .instalaciones .grid-galeria .galeria-img-1 {
+        grid-column: span 1;
+    }
+
+    .instalaciones .grid-galeria .galeria-img-2 {
+        grid-row: span 1;
+    }
+
+    .instalaciones .grid-galeria .galeria-img-3 {
+        grid-row: span 1;
+    }
+
+
     /*?---------- PÁGINA SERVICIOS ----------*/
     .contenedor-servicios {
         .servicio-contenedor {
@@ -305,6 +335,39 @@
 
 }
 
+@media screen and (max-width: 720px) {
+    .banner {
+        height: calc(100vh - 120px);
+    }
+
+    .banner-info h1 {
+        font-size: 50px;
+    }
+
+    /*?---------- PÁGINA ¿QUIÉNES SOMOS? ----------*/
+    .contenedor-quienes-somos {
+        .quienes-somos {
+            div {
+                margin: 100px 0 0 0;
+            }
+
+            &:nth-child(1) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    .instalaciones h2 {
+        margin-left: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .instalaciones .grid-galeria {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media screen and (max-width: 675px) {
 
     /*? INDEX: SECCIÓN HERO */
@@ -356,11 +419,10 @@
     }
 
 
-
     /*?---------- PÁGINA CONTACTO ----------*/
 
     .banner {
-        height: calc(100vh - 120px);
+        height: calc(100vh - 95px);
     }
 
     .banner-info h1 {
@@ -397,6 +459,10 @@
 }
 
 @media screen and (max-width: 625px) {
+
+    .banner {
+        height: calc(100vh - 85px);
+    }
 
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
     .contacto div h2 {
@@ -562,7 +628,7 @@
     }
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 460px) {
 
     /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
     .quienes-somos div h2 {
@@ -653,6 +719,9 @@
 }
 
 @media screen and (max-width: 445px) {
+    .banner {
+        height: calc(100vh - 75px);
+    }
 
     /*?---------- PÁGINA SERVICIOS ----------*/
     .contenedor-servicios {
