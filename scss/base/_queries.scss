@@ -85,12 +85,12 @@
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
     .contacto div h2 {
         font-size: 35px
-      }
+    }
 
 
     /*?----------PÁGINA CONTACTO ----------*/
     .contacto-mapa-form {
-        @include flexbox-propiedades(flex,column,space-around,center);
+        @include flexbox-propiedades(flex, column, space-around, center);
     }
 
     .contacto-mapa-form .mapa iframe {
@@ -120,6 +120,7 @@
 }
 
 @media screen and (max-width: 940px) {
+
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
     .contacto div h2 {
         font-size: 32px
@@ -149,7 +150,7 @@
     .quienes-somos div {
         width: 100%;
         text-align: center;
-        @include flexbox-propiedades(flex,column,center,center);
+        @include flexbox-propiedades(flex, column, center, center);
     }
 
     .quienes-somos div h2 {
@@ -241,22 +242,51 @@
         text-align: center;
     }
 
+    /*?---------- PÁGINA SERVICIOS ----------*/
+    .contenedor-servicios {
+        .servicio-contenedor {
+            flex-direction: column;
+
+            div {
+                width: 70%;
+
+                h2 {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                p {
+                    text-align: justify;
+                }
+            }
+
+            &:nth-child(odd) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+
+
     /*?---------- PÁGINA PERSONAL ----------*/
-    .personal-medico .contenedor-cards .card-informativa-medico, .personal-procesos .contenedor-cards .card-informativa-procesos {
+    .personal-medico .contenedor-cards .card-informativa-medico,
+    .personal-procesos .contenedor-cards .card-informativa-procesos {
         flex-direction: column;
 
         &:nth-child(even) {
             flex-direction: column-reverse;
 
-            .card-contenido-medico .redes-1-start, .card-contenido-procesos .redes-2-start {
+            .card-contenido-medico .redes-1-start,
+            .card-contenido-procesos .redes-2-start {
                 justify-content: end;
             }
         }
     }
 
-    .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+    .personal-procesos .contenedor-cards .card-informativa-procesos img,
+    .personal-medico .contenedor-cards .card-informativa-medico img {
         width: 400px;
-      }
+    }
 
     /*?----------PÁGINA CONTACTO ----------*/
     .contacto-mapa-form .mapa iframe {
@@ -310,6 +340,23 @@
         height: 350px;
     }
 
+    /*?---------- PÁGINA SERVICIOS ----------*/
+    .contenedor-servicios {
+        .servicio-contenedor {
+            flex-direction: column;
+
+            img {
+                width: 300px;
+            }
+
+            div {
+                width: 80%;
+            }
+        }
+    }
+
+
+
     /*?---------- PÁGINA CONTACTO ----------*/
 
     .banner {
@@ -350,6 +397,7 @@
 }
 
 @media screen and (max-width: 625px) {
+
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
     .contacto div h2 {
         font-size: 28px;
@@ -427,22 +475,47 @@
         text-align: center;
     }
 
+    /*?---------- PÁGINA SERVICIOS ----------*/
+    .contenedor-servicios {
+        .servicio-contenedor {
+            flex-direction: column;
+
+            img {
+                width: 250px;
+            }
+
+            div {
+                h2 {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
     /*?---------- PÁGINA PERSONAL ----------*/
-    .personal-procesos, .personal-medico {
+    .personal-procesos,
+    .personal-medico {
         text-align: center;
     }
 
-    .personal-procesos .directorio-info-2 h2, .personal-medico .directorio-info-1 h2 {
+    .personal-procesos .directorio-info-2 h2,
+    .personal-medico .directorio-info-1 h2 {
         width: 100%;
         text-align: center;
     }
 
-    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico {
+    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos,
+    .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico {
         align-items: center;
         text-align: justify;
     }
-    
-    .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+
+    .personal-procesos .contenedor-cards .card-informativa-procesos img,
+    .personal-medico .contenedor-cards .card-informativa-medico img {
         width: 350px;
     }
 
@@ -490,6 +563,7 @@
 }
 
 @media screen and (max-width: 470px) {
+
     /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
     .quienes-somos div h2 {
         width: 100%;
@@ -519,9 +593,21 @@
         font-size: 25px;
     }
 
+    /*?---------- PÁGINA SERVICIOS ----------*/
+    .contenedor-servicios {
+        .servicio-contenedor {
+            flex-direction: column;
+
+            img {
+                width: 230px;
+            }
+        }
+    }
+
     /*?---------- PÁGINA PERSONAL ----------*/
-    
-    .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+
+    .personal-procesos .contenedor-cards .card-informativa-procesos img,
+    .personal-medico .contenedor-cards .card-informativa-medico img {
         width: 300px;
     }
 
@@ -567,13 +653,34 @@
 }
 
 @media screen and (max-width: 445px) {
+
+    /*?---------- PÁGINA SERVICIOS ----------*/
+    .contenedor-servicios {
+        .servicio-contenedor {
+
+            img {
+                width: 200px;
+            }
+
+            div {
+                padding: 20px;
+
+                h2 {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
     /*?---------- PÁGINA PERSONAL ----------*/
-    
-    .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+
+    .personal-procesos .contenedor-cards .card-informativa-procesos img,
+    .personal-medico .contenedor-cards .card-informativa-medico img {
         width: 260px;
     }
 
-    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos p, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico p {
+    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos p,
+    .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico p {
         font-size: 18px;
     }
 
@@ -645,24 +752,29 @@
 
     /*?---------- PÁGINA PERSONAL ----------*/
 
-    .personal-medico .directorio-info-1 h2, .personal-procesos .directorio-info-2 h2 {
+    .personal-medico .directorio-info-1 h2,
+    .personal-procesos .directorio-info-2 h2 {
         font-size: 30px;
     }
 
-    .personal-medico .directorio-info-1 p, .personal-procesos .directorio-info-2 p {
+    .personal-medico .directorio-info-1 p,
+    .personal-procesos .directorio-info-2 p {
         font-size: 16px;
     }
-    
-    .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+
+    .personal-procesos .contenedor-cards .card-informativa-procesos img,
+    .personal-medico .contenedor-cards .card-informativa-medico img {
         width: 230px;
     }
 
-    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos h3, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico h3 {
+    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos h3,
+    .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico h3 {
         font-size: 25px;
         text-align: center;
     }
-    
-    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos p, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico p {
+
+    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos p,
+    .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico p {
         font-size: 16px;
     }
 

@@ -1,0 +1,37 @@
+/**-------------------------------------------------------------------*/
+/**-------------------- Estilos de pág. SERVICIOS ---------------------*/
+/**-------------------------------------------------------------------*/
+
+.banner-img-servicios {
+    background-image: url("../img/servicios-banner.jpg");
+}
+
+.contenedor-servicios {
+    .servicio-contenedor {
+        background-color: aqua;
+        margin: 100px 10px 100px 10px;
+        @include flexbox-propiedades(flex,row,center,center);
+        
+        img {
+            width: 350px;
+            margin: 25px;
+            
+        }
+    
+        div {
+            width: 60%;
+            padding: 30px;
+    
+            h2 {
+                padding: 10px 0px 10px 0px;
+                text-align: left;
+                font-size: 38px;
+            }
+    
+            p {
+                text-align: left;
+                text-indent: 1.5em;
+            }
+        }
+    }
+}
