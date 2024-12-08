@@ -633,7 +633,6 @@ footer .footer-redes-sociales div a i {
 }
 
 .contenedor-servicios .servicio-contenedor {
-  background-color: aqua;
   margin: 100px 10px 100px 10px;
   display: flex;
   flex-direction: row;

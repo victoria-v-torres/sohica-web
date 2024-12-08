@@ -8,7 +8,6 @@
 
 .contenedor-servicios {
     .servicio-contenedor {
-        background-color: aqua;
         margin: 100px 10px 100px 10px;
         @include flexbox-propiedades(flex,row,center,center);
         
