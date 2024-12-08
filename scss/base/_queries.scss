@@ -55,7 +55,7 @@
     }
 
     /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
-    .card .card-body .card-title {
+    .card-title {
         font-size: 26px;
     }
 }
@@ -124,9 +124,14 @@
     .contacto div h2 {
         font-size: 32px
     }
+
 }
 
 @media screen and (max-width: 876px) {
+    .banner {
+        height: 350px;
+    }
+
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
     .contacto div h2 {
         font-size: 28px
@@ -236,6 +241,22 @@
         text-align: center;
     }
 
+    /*?---------- PÁGINA PERSONAL ----------*/
+    .personal-medico .contenedor-cards .card-informativa-medico, .personal-procesos .contenedor-cards .card-informativa-procesos {
+        flex-direction: column;
+
+        &:nth-child(even) {
+            flex-direction: column-reverse;
+
+            .card-contenido-medico .redes-1-start, .card-contenido-procesos .redes-2-start {
+                justify-content: end;
+            }
+        }
+    }
+
+    .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+        width: 400px;
+      }
 
     /*?----------PÁGINA CONTACTO ----------*/
     .contacto-mapa-form .mapa iframe {
@@ -255,6 +276,7 @@
 }
 
 @media screen and (max-width: 675px) {
+
     /*? INDEX: SECCIÓN HERO */
 
     .hero {
@@ -291,7 +313,7 @@
     /*?---------- PÁGINA CONTACTO ----------*/
 
     .banner {
-        height: 350px;
+        height: calc(100vh - 120px);
     }
 
     .banner-info h1 {
@@ -336,6 +358,14 @@
 
 @media screen and (max-width: 550px) {
 
+    body p {
+        font-size: 20px;
+    }
+
+    body h2 {
+        font-size: 35px;
+    }
+
     /*? INDEX: SECCIÓN HERO */
 
     .hero {
@@ -343,18 +373,12 @@
     }
 
     .banner-info p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
-    .quienes-somos div h2 {
-        width: 70%;
-        margin: 0 15% 0 15%;
-        font-size: 25px;
-    }
-
-    .quienes-somos div p {
-        font-size: 15px;
+    .quienes-somos div {
+        text-align: center;
     }
 
     .quienes-somos div a {
@@ -381,11 +405,11 @@
         font-size: 25px;
     }
 
-    .card .card-body .card-title {
+    .card-title {
         font-size: 20px;
     }
 
-    .card .card-body .card-subtitle {
+    .card-subtitle {
         font-size: 16px;
     }
 
@@ -401,6 +425,25 @@
         margin: 0;
         padding: 0;
         text-align: center;
+    }
+
+    /*?---------- PÁGINA PERSONAL ----------*/
+    .personal-procesos, .personal-medico {
+        text-align: center;
+    }
+
+    .personal-procesos .directorio-info-2 h2, .personal-medico .directorio-info-1 h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico {
+        align-items: center;
+        text-align: justify;
+    }
+    
+    .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+        width: 350px;
     }
 
     /*?---------- PÁGINA CONTACTO ----------*/
@@ -446,11 +489,10 @@
     }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
     /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
     .quienes-somos div h2 {
         width: 100%;
-        margin-left: 0;
     }
 
     .quienes-somos div a {
@@ -470,11 +512,20 @@
         height: 150px;
     }
 
-    /*?---------- PÁGINA CONTACTO ----------*/
+    /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
 
-    .banner {
-        height: 400px;
+    .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
+        width: 100%;
+        font-size: 25px;
     }
+
+    /*?---------- PÁGINA PERSONAL ----------*/
+    
+    .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+        width: 300px;
+    }
+
+    /*?---------- PÁGINA CONTACTO ----------*/
 
     .banner-info h1 {
         font-size: 35px;
@@ -515,7 +566,24 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 445px) {
+    /*?---------- PÁGINA PERSONAL ----------*/
+    
+    .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+        width: 260px;
+    }
+
+    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos p, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico p {
+        font-size: 18px;
+    }
+
+    .card-subtitle {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 385px) {
     /*? INDEX: SECCIÓN HERO */
 
     .banner-info h1 {
@@ -575,11 +643,30 @@
         text-align: center;
     }
 
-    /*?---------- PÁGINA CONTACTO ----------*/
+    /*?---------- PÁGINA PERSONAL ----------*/
 
-    .banner {
-        height: 450px;
+    .personal-medico .directorio-info-1 h2, .personal-procesos .directorio-info-2 h2 {
+        font-size: 30px;
     }
+
+    .personal-medico .directorio-info-1 p, .personal-procesos .directorio-info-2 p {
+        font-size: 16px;
+    }
+    
+    .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+        width: 230px;
+    }
+
+    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos h3, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos p, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico p {
+        font-size: 16px;
+    }
+
+    /*?---------- PÁGINA CONTACTO ----------*/
 
     .banner-info h1 {
         font-size: 35px;

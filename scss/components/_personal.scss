@@ -1,0 +1,118 @@
+/**-------------------------------------------------------------------*/
+/**-------------------- Estilos de pág. PERSONAL ---------------------*/
+/**-------------------------------------------------------------------*/
+
+.banner-img-personal {
+    background-image: url("../img/personal-banner.jpg");
+}
+
+.personal-medico {
+    margin: 100px 30px 100px 30px;
+
+    .directorio-info-1 {
+        padding: 0 15px 0 15px;
+
+        h2 {
+            @include titulo-separador-directorio(#28c728);
+        }
+        p {
+            @extend %info-directorio-propiedades-fijas;
+        }
+    }
+
+    .contenedor-cards {
+
+        .card-informativa-medico {
+            @include card-informativa-personal(#28c7286b);
+        
+            img {
+
+                @extend %card-informativa-personal-img;
+            }
+        
+            .card-contenido-medico {
+                @extend %card-informativa-personal-contenido;
+        
+                h3 {
+                    @include nombre-persona(#28c728);
+                }
+        
+                .redes-1-start{
+                    @include redes-posicion(start);
+                    
+                    a {
+                        i {
+                            @include icono-redes-color(#28c728);
+                        }
+                    }
+                }
+        
+                .redes-1-end{
+                    @include redes-posicion(end);
+        
+                    a {
+                        i {
+                            @include icono-redes-color(#28c728);
+                        }
+                    }
+                }
+        
+            }
+        }
+    }
+}
+
+.personal-procesos {
+    margin: 0px 30px 100px 30px;
+
+    .directorio-info-2 {
+        padding: 0 15px 0 15px;
+
+        h2 {
+            @include titulo-separador-directorio(#3f9ac1);
+        }
+        p {
+            @extend %info-directorio-propiedades-fijas;
+        }
+    }
+
+    .contenedor-cards {
+
+        .card-informativa-procesos {
+            @include card-informativa-personal(#3f9ac16d);
+        
+            img {
+                @extend %card-informativa-personal-img;
+            }
+        
+            .card-contenido-procesos {
+                @extend %card-informativa-personal-contenido;
+        
+                h3 {
+                    @include nombre-persona(#3f9ac1);
+                }
+        
+            }
+        
+            .redes-2-start{
+                @include redes-posicion(start);
+                a {
+                    i {
+                        @include icono-redes-color(#3f9ac1);
+                    }
+                }
+            }
+        
+            .redes-2-end{
+                @include redes-posicion(end);
+        
+                a {
+                    i {
+                        @include icono-redes-color(#3f9ac1);
+                    }
+                }
+            }
+                    
+        }
+    }
+}

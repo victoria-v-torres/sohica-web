@@ -667,7 +667,7 @@ del contendor de Bootstrap*/
     text-align: left;
 }
 
-.card-contenido h3 {
+.card-contenido-medico h3 {
     width: fit-content;
     text-align: left;
     padding: 5px;
@@ -682,8 +682,7 @@ del contendor de Bootstrap*/
 }
 
 .redes-1-start,
-.redes-2-start
- {
+.redes-2-start {
     font-size: 30px;
     display: flex;
     justify-content: start;

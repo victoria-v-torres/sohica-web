@@ -31,11 +31,13 @@ $imagenes: "../img/hero-1.jpg", "../img/quienes-somos-banner.jpg", "../img/servi
 /**------------------------ EXTENDS ----------------------*/
 /**-------------------------------------------------------*/
 
+/*Propiedades fijas para botones*/
 %btn-propiedades-fijas {
     margin: 10px;
     border-radius: 5px;
 }
 
+/*Propiedades fijas para los banners de las páginas*/
 %banner-propiedades-fijas {
     text-align: center;
     background-position: center;
@@ -44,10 +46,77 @@ $imagenes: "../img/hero-1.jpg", "../img/quienes-somos-banner.jpg", "../img/servi
     background-attachment: fixed;
 }
 
+/*Propiedades fijas para grillas de 3 columnas*/
 %grid-propiedades-3col {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 300px;
+}
+
+/*Propiedades fijas para el contenedor del INDEX con la info de salud ocupacional
+y gestión de seguridad de procesos*/
+%contenedor-salud-y-gestion-propiedades-fijas {
+    width: 50%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* +++++++++++++++++++++  Pág. PERSONAL  +++++++++++++++++ */
+
+/*Propiedades fijas para títulos separadores del directorios*/
+%titulos-directorio-propidades-fijas {
+    padding: 10px 10px 10px 0px;
+    width: fit-content;
+    text-align: left;
+}
+
+/*Propiedades fijas para la información introductoria de las secciones del directorio*/
+%info-directorio-propiedades-fijas {
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+/*Propiedades fijas para las cards informativas del personal*/
+%card-informativa-personal-propiedades-fijas {
+    margin-top: 50px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+/*Propiedades fijas para las fotos del personal*/
+%card-informativa-personal-img {
+    width: 350px;
+    margin: 25px;
+    border-radius: 5px;
+}
+
+/*Propiedades fijas para el contenido informativo en las cards del personal*/
+%card-informativa-personal-contenido {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+}
+
+/*Propiedades fijas para el nombre de la persona*/
+%nombre-personal-propiedades-fijas {
+    width: fit-content;
+    text-align: left;
+    padding: 5px;
+}
+
+/*Propiedades fijas para las redes sociales de la persona*/
+%redes-personal-propiedades-fijas {
+    font-size: 30px;
+    display: flex;
+}
+
+/*Propiedades fijas de los iconos de las redes sociales*/
+%iconos-redes-personal-propiedades-fijas {
+    margin: 10px;
 }
 
 
@@ -55,7 +124,7 @@ $imagenes: "../img/hero-1.jpg", "../img/quienes-somos-banner.jpg", "../img/servi
 /**------------------------ MIXINS -----------------------*/
 /**-------------------------------------------------------*/
 
-
+/*Mixin con propiedades principales de flexbox*/
 @mixin flexbox-propiedades($display,$direction,$justify,$align){
     display: $display;
     flex-direction: $direction;
@@ -77,14 +146,50 @@ $imagenes: "../img/hero-1.jpg", "../img/quienes-somos-banner.jpg", "../img/servi
     color: $color-principal;
 }
 
-
 /*Mixin con propiedades de los contendores del INDEX con info de salud ocupacional
 y gestion de seguridad de procesos*/
 @mixin contenedor-salud-y-gestion($bg-color, $imagen, $posicion) {
-    width: 50%;
+    @extend %contenedor-salud-y-gestion-propiedades-fijas;
     background-color: $bg-color;
     background-image: url($imagen);
     background-position: $posicion;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+
+}
+
+
+/* +++++++++++++++++++++  Pág. PERSONAL  +++++++++++++++++ */
+
+/*Mixin con propiedades para los titulos separadores del directorio con
+la posibilidad de cambiarle el color del borde*/
+@mixin titulo-separador-directorio($color-border-bottom) {
+    @extend %titulos-directorio-propidades-fijas;
+    border-bottom: 4px solid $color-border-bottom;
+}
+
+/*Mixin con propiedades para el contenedor principal que conforma la tarjeta
+informativa del personal, abierto a la posibilidad de cambiarle el color del borde*/
+@mixin card-informativa-personal($color-border-bottom) {
+    @extend %card-informativa-personal-propiedades-fijas;
+    border-bottom: 2px solid $color-border-bottom;
+}
+
+/*Mixin con propiedades para la presentación del nombre del personal,
+abierto a la posibilidad de cambiarle el color del borde*/
+@mixin nombre-persona($color-border-bottom) {
+    @extend %nombre-personal-propiedades-fijas;
+    border-bottom: 2px solid $color-border-bottom;
+}
+
+/*Mixin con propiedades para la posicion de las redes del personal
+en la tarjeta informativa*/
+@mixin redes-posicion($justify-content) {
+    @extend %redes-personal-propiedades-fijas;
+    justify-content: $justify-content;
+}
+
+/*Mixin con propiedades para cambiar el color de los iconos de las
+redes del personal dependiendo de su tipo*/
+@mixin icono-redes-color($color){
+    @extend %iconos-redes-personal-propiedades-fijas;
+    color: $color;
 }

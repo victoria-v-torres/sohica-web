@@ -74,6 +74,12 @@ también)*/
     }
 }
 
+/*Clase utilizada para contener las tarjetas informativas de
+personal en la pág. correspondiente en sus dos secciones*/
+.contenedor-cards {
+    padding: 0 30px 30px 30px;
+}
+
 
 /**-------------------------------------------------------*/
 /**----------------------- BOOTSTRAP ---------------------*/
@@ -171,21 +177,6 @@ del contendor de Bootstrap*/
         height: auto;
         text-align: center;
         @include flexbox-propiedades(flex,column,center,center);
-
-        .card-title {
-            padding: 5px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #0a78ab;
-            color: #122027;
-            font-size: 30px;
-        }
-
-        .card-subtitle {
-            padding: 5px;
-            margin-bottom: 15px;
-            color: rgb(68, 86, 85);
-            font-size: 20px;
-        }
     }
 
     &:hover {
@@ -195,6 +186,21 @@ del contendor de Bootstrap*/
         -webkit-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
         -moz-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
     }
+}
+
+.card-title {
+    padding: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #0a78ab;
+    color: #122027;
+    font-size: 30px;
+}
+
+.card-subtitle {
+    padding: 5px;
+    margin-bottom: 15px;
+    color: rgb(68, 86, 85);
+    font-size: 20px;
 }
 
 /*Modificaciones a las clases del carrusel de Bootstrap*/

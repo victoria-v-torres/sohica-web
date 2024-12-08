@@ -9,12 +9,14 @@
 /**-------------------------------------------------------*/
 /**------------------------ EXTENDS ----------------------*/
 /**-------------------------------------------------------*/
+/*Propiedades fijas para botones*/
 @import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 .btn-outline-info, .btn-outline-primary, .btn-primary {
   margin: 10px;
   border-radius: 5px;
 }
 
+/*Propiedades fijas para los banners de las páginas*/
 .hero, .banner {
   text-align: center;
   background-position: center;
@@ -23,19 +25,96 @@
   background-attachment: fixed;
 }
 
+/*Propiedades fijas para grillas de 3 columnas*/
 .servicios .servicios-contenedor .grid-servicios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 300px;
 }
 
+/*Propiedades fijas para el contenedor del INDEX con la info de salud ocupacional
+y gestión de seguridad de procesos*/
+.salud-ocu-gestion-proc div .gestion-procesos, .salud-ocu-gestion-proc div .salud-ocupacional {
+  width: 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+/* +++++++++++++++++++++  Pág. PERSONAL  +++++++++++++++++ */
+/*Propiedades fijas para títulos separadores del directorios*/
+.personal-procesos .directorio-info-2 h2, .personal-medico .directorio-info-1 h2 {
+  padding: 10px 10px 10px 0px;
+  width: fit-content;
+  text-align: left;
+}
+
+/*Propiedades fijas para la información introductoria de las secciones del directorio*/
+.personal-procesos .directorio-info-2 p, .personal-medico .directorio-info-1 p {
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+
+/*Propiedades fijas para las cards informativas del personal*/
+.personal-procesos .contenedor-cards .card-informativa-procesos, .personal-medico .contenedor-cards .card-informativa-medico {
+  margin-top: 50px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+/*Propiedades fijas para las fotos del personal*/
+.personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+  width: 350px;
+  margin: 25px;
+  border-radius: 5px;
+}
+
+/*Propiedades fijas para el contenido informativo en las cards del personal*/
+.personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+}
+
+/*Propiedades fijas para el nombre de la persona*/
+.personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos h3, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico h3 {
+  width: fit-content;
+  text-align: left;
+  padding: 5px;
+}
+
+/*Propiedades fijas para las redes sociales de la persona*/
+.personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-end, .personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-start, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-end, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-start {
+  font-size: 30px;
+  display: flex;
+}
+
+/*Propiedades fijas de los iconos de las redes sociales*/
+.personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-end a i, .personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-start a i, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-end a i, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-start a i {
+  margin: 10px;
+}
+
 /**-------------------------------------------------------*/
 /**------------------------ MIXINS -----------------------*/
 /**-------------------------------------------------------*/
+/*Mixin con propiedades principales de flexbox*/
 /*Mixin con propiedades para rellenar botones "filled" con diferentes colores*/
 /*Mixin con propiedades para rellenar botones "outlined" con diferentes colores*/
 /*Mixin con propiedades de los contendores del INDEX con info de salud ocupacional
 y gestion de seguridad de procesos*/
+/* +++++++++++++++++++++  Pág. PERSONAL  +++++++++++++++++ */
+/*Mixin con propiedades para los titulos separadores del directorio con
+la posibilidad de cambiarle el color del borde*/
+/*Mixin con propiedades para el contenedor principal que conforma la tarjeta
+informativa del personal, abierto a la posibilidad de cambiarle el color del borde*/
+/*Mixin con propiedades para la presentación del nombre del personal,
+abierto a la posibilidad de cambiarle el color del borde*/
+/*Mixin con propiedades para la posicion de las redes del personal
+en la tarjeta informativa*/
+/*Mixin con propiedades para cambiar el color de los iconos de las
+redes del personal dependiendo de su tipo*/
 /* Aplicamos al "Selector Universal" un RESET para reiniciar valores por defecto*/
 * {
   margin: 0;
@@ -104,6 +183,12 @@ también)*/
 .banner-info div {
   display: flex;
   justify-content: center;
+}
+
+/*Clase utilizada para contener las tarjetas informativas de
+personal en la pág. correspondiente en sus dos secciones*/
+.contenedor-cards {
+  padding: 0 30px 30px 30px;
 }
 
 /**-------------------------------------------------------*/
@@ -195,25 +280,27 @@ del contendor de Bootstrap*/
   justify-content: center;
   align-items: center;
 }
-.card .card-body .card-title {
-  padding: 5px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #0a78ab;
-  color: #122027;
-  font-size: 30px;
-}
-.card .card-body .card-subtitle {
-  padding: 5px;
-  margin-bottom: 15px;
-  color: rgb(68, 86, 85);
-  font-size: 20px;
-}
 .card:hover {
   top: -6px;
   background-color: #e0f5e0;
   box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
   -webkit-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
   -moz-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
+}
+
+.card-title {
+  padding: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #0a78ab;
+  color: #122027;
+  font-size: 30px;
+}
+
+.card-subtitle {
+  padding: 5px;
+  margin-bottom: 15px;
+  color: rgb(68, 86, 85);
+  font-size: 20px;
 }
 
 /*Modificaciones a las clases del carrusel de Bootstrap*/
@@ -396,12 +483,9 @@ footer .footer-redes-sociales div a i {
   display: flex;
 }
 .salud-ocu-gestion-proc div .salud-ocupacional {
-  width: 50%;
   background-color: #00C300;
   background-image: url("../img/salud-ocupacional-corta.png");
   background-position: left;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
   display: flex;
   flex-direction: row;
   justify-content: right;
@@ -419,12 +503,9 @@ footer .footer-redes-sociales div a i {
   color: white;
 }
 .salud-ocu-gestion-proc div .gestion-procesos {
-  width: 50%;
   background-color: #00A0E3;
   background-image: url("../img/gestion-procesos-corta.png");
   background-position: right;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -544,6 +625,69 @@ footer .footer-redes-sociales div a i {
   font-weight: bold;
 }
 
+/**-------------------------------------------------------------------*/
+/**-------------------- Estilos de pág. PERSONAL ---------------------*/
+/**-------------------------------------------------------------------*/
+.banner-img-personal {
+  background-image: url("../img/personal-banner.jpg");
+}
+
+.personal-medico {
+  margin: 100px 30px 100px 30px;
+}
+.personal-medico .directorio-info-1 {
+  padding: 0 15px 0 15px;
+}
+.personal-medico .directorio-info-1 h2 {
+  border-bottom: 4px solid #28c728;
+}
+.personal-medico .contenedor-cards .card-informativa-medico {
+  border-bottom: 2px solid rgba(40, 199, 40, 0.4196078431);
+}
+.personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico h3 {
+  border-bottom: 2px solid #28c728;
+}
+.personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-start {
+  justify-content: start;
+}
+.personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-start a i {
+  color: #28c728;
+}
+.personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-end {
+  justify-content: end;
+}
+.personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-end a i {
+  color: #28c728;
+}
+
+.personal-procesos {
+  margin: 0px 30px 100px 30px;
+}
+.personal-procesos .directorio-info-2 {
+  padding: 0 15px 0 15px;
+}
+.personal-procesos .directorio-info-2 h2 {
+  border-bottom: 4px solid #3f9ac1;
+}
+.personal-procesos .contenedor-cards .card-informativa-procesos {
+  border-bottom: 2px solid rgba(63, 154, 193, 0.4274509804);
+}
+.personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos h3 {
+  border-bottom: 2px solid #3f9ac1;
+}
+.personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-start {
+  justify-content: start;
+}
+.personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-start a i {
+  color: #3f9ac1;
+}
+.personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-end {
+  justify-content: end;
+}
+.personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-end a i {
+  color: #3f9ac1;
+}
+
 /**---------------------------------------------------------------*/
 /**------------------- Estilos de pág. CONTACTO ------------------*/
 /**---------------------------------------------------------------*/
@@ -627,7 +771,7 @@ footer .footer-redes-sociales div a i {
     font-size: 25px;
   }
   /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
-  .card .card-body .card-title {
+  .card-title {
     font-size: 26px;
   }
 }
@@ -684,6 +828,9 @@ footer .footer-redes-sociales div a i {
   }
 }
 @media screen and (max-width: 876px) {
+  .banner {
+    height: 350px;
+  }
   /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
   .contacto div h2 {
     font-size: 28px;
@@ -773,6 +920,19 @@ footer .footer-redes-sociales div a i {
     width: 100%;
     text-align: center;
   }
+  /*?---------- PÁGINA PERSONAL ----------*/
+  .personal-medico .contenedor-cards .card-informativa-medico, .personal-procesos .contenedor-cards .card-informativa-procesos {
+    flex-direction: column;
+  }
+  .personal-medico .contenedor-cards .card-informativa-medico:nth-child(even), .personal-procesos .contenedor-cards .card-informativa-procesos:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .personal-medico .contenedor-cards .card-informativa-medico:nth-child(even) .card-contenido-medico .redes-1-start, .personal-medico .contenedor-cards .card-informativa-medico:nth-child(even) .card-contenido-procesos .redes-2-start, .personal-procesos .contenedor-cards .card-informativa-procesos:nth-child(even) .card-contenido-medico .redes-1-start, .personal-procesos .contenedor-cards .card-informativa-procesos:nth-child(even) .card-contenido-procesos .redes-2-start {
+    justify-content: end;
+  }
+  .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+    width: 400px;
+  }
   /*?----------PÁGINA CONTACTO ----------*/
   .contacto-mapa-form .mapa iframe {
     width: 550px;
@@ -814,7 +974,7 @@ footer .footer-redes-sociales div a i {
   }
   /*?---------- PÁGINA CONTACTO ----------*/
   .banner {
-    height: 350px;
+    height: calc(100vh - 120px);
   }
   .banner-info h1 {
     font-size: 50px;
@@ -847,21 +1007,22 @@ footer .footer-redes-sociales div a i {
   }
 }
 @media screen and (max-width: 550px) {
+  body p {
+    font-size: 20px;
+  }
+  body h2 {
+    font-size: 35px;
+  }
   /*? INDEX: SECCIÓN HERO */
   .hero {
     height: calc(100vh - 60px);
   }
   .banner-info p {
-    font-size: 15px;
+    font-size: 16px;
   }
   /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
-  .quienes-somos div h2 {
-    width: 70%;
-    margin: 0 15% 0 15%;
-    font-size: 25px;
-  }
-  .quienes-somos div p {
-    font-size: 15px;
+  .quienes-somos div {
+    text-align: center;
   }
   .quienes-somos div a {
     width: 50%;
@@ -882,10 +1043,10 @@ footer .footer-redes-sociales div a i {
   .personal h2 {
     font-size: 25px;
   }
-  .card .card-body .card-title {
+  .card-title {
     font-size: 20px;
   }
-  .card .card-body .card-subtitle {
+  .card-subtitle {
     font-size: 16px;
   }
   /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
@@ -898,6 +1059,21 @@ footer .footer-redes-sociales div a i {
     margin: 0;
     padding: 0;
     text-align: center;
+  }
+  /*?---------- PÁGINA PERSONAL ----------*/
+  .personal-procesos, .personal-medico {
+    text-align: center;
+  }
+  .personal-procesos .directorio-info-2 h2, .personal-medico .directorio-info-1 h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico {
+    align-items: center;
+    text-align: justify;
+  }
+  .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+    width: 350px;
   }
   /*?---------- PÁGINA CONTACTO ----------*/
   .banner-info h1 {
@@ -931,11 +1107,10 @@ footer .footer-redes-sociales div a i {
     text-align: center;
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
   .quienes-somos div h2 {
     width: 100%;
-    margin-left: 0;
   }
   .quienes-somos div a {
     width: 80%;
@@ -950,10 +1125,16 @@ footer .footer-redes-sociales div a i {
     width: 250px;
     height: 150px;
   }
-  /*?---------- PÁGINA CONTACTO ----------*/
-  .banner {
-    height: 400px;
+  /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+  .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
+    width: 100%;
+    font-size: 25px;
   }
+  /*?---------- PÁGINA PERSONAL ----------*/
+  .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+    width: 300px;
+  }
+  /*?---------- PÁGINA CONTACTO ----------*/
   .banner-info h1 {
     font-size: 35px;
   }
@@ -984,7 +1165,19 @@ footer .footer-redes-sociales div a i {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 445px) {
+  /*?---------- PÁGINA PERSONAL ----------*/
+  .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+    width: 260px;
+  }
+  .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos p, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico p {
+    font-size: 18px;
+  }
+  .card-subtitle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 385px) {
   /*? INDEX: SECCIÓN HERO */
   .banner-info h1 {
     font-size: 30px;
@@ -1031,10 +1224,24 @@ footer .footer-redes-sociales div a i {
     padding: 0;
     text-align: center;
   }
-  /*?---------- PÁGINA CONTACTO ----------*/
-  .banner {
-    height: 450px;
+  /*?---------- PÁGINA PERSONAL ----------*/
+  .personal-medico .directorio-info-1 h2, .personal-procesos .directorio-info-2 h2 {
+    font-size: 30px;
   }
+  .personal-medico .directorio-info-1 p, .personal-procesos .directorio-info-2 p {
+    font-size: 16px;
+  }
+  .personal-procesos .contenedor-cards .card-informativa-procesos img, .personal-medico .contenedor-cards .card-informativa-medico img {
+    width: 230px;
+  }
+  .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos h3, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos p, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico p {
+    font-size: 16px;
+  }
+  /*?---------- PÁGINA CONTACTO ----------*/
   .banner-info h1 {
     font-size: 35px;
   }
