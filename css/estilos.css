@@ -665,24 +665,24 @@ footer .footer-redes-sociales div a i {
 }
 
 .contenedor-servicios .servicio-contenedor {
-  margin: 100px 10px 100px 10px;
+  margin: 100px 20px 100px 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 .contenedor-servicios .servicio-contenedor img {
-  width: 350px;
+  width: 330px;
   margin: 25px;
 }
 .contenedor-servicios .servicio-contenedor div {
   width: 60%;
-  padding: 30px;
+  padding: 40px;
 }
 .contenedor-servicios .servicio-contenedor div h2 {
   padding: 10px 0px 10px 0px;
   text-align: left;
-  font-size: 38px;
+  font-size: 35px;
 }
 .contenedor-servicios .servicio-contenedor div p {
   text-align: left;
@@ -1100,6 +1100,9 @@ footer .footer-redes-sociales div a i {
   .contacto iframe {
     width: 450px;
     height: 350px;
+  }
+  .contenedor-quienes-somos .quienes-somos div {
+    margin: 50px 0 0 0;
   }
   /*?---------- PÁGINA SERVICIOS ----------*/
   .contenedor-servicios .servicio-contenedor {

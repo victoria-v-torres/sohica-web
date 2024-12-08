@@ -8,23 +8,23 @@
 
 .contenedor-servicios {
     .servicio-contenedor {
-        margin: 100px 10px 100px 10px;
+        margin: 100px 20px 100px 20px;
         @include flexbox-propiedades(flex,row,center,center);
         
         img {
-            width: 350px;
+            width: 330px;
             margin: 25px;
             
         }
     
         div {
             width: 60%;
-            padding: 30px;
+            padding: 40px;
     
             h2 {
                 padding: 10px 0px 10px 0px;
                 text-align: left;
-                font-size: 38px;
+                font-size: 35px;
             }
     
             p {
