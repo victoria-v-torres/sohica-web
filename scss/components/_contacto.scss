@@ -3,7 +3,7 @@
 /**---------------------------------------------------------------*/
 
 .banner-img-contacto {
-    background-image: url("../img/contacto-banner.jpg");
+    background-image: url(nth($list: $imagenes-hero-banner, $n:5 ));
 }
 
 .contacto-mapa-form {

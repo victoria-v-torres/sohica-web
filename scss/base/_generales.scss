@@ -7,23 +7,26 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: "Sarabun", serif;
     font-weight: 400;
     background-color: $color-bg-page;
 
     h1 {
-        font-size: 60px;
+        font-size: nth($list: $font-size-encabezados-y-parrafos, $n:1 );
+
     }
 
     h2 {
         width: fit-content;
-        font-size: 40px;
+        font-size: nth($list: $font-size-encabezados-y-parrafos, $n:2 );
         border-bottom: 4px solid black;
     }
 
     p {
-        font-size: 20px;
+        font-size: nth($list: $font-size-encabezados-y-parrafos, $n:3 );;
     }
 }
 

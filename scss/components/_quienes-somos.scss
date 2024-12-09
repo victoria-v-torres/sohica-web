@@ -3,7 +3,7 @@
 /**--------------------------------------------------------------------------*/
 
 .banner-img-quienes-somos {
-    background-image: url("../img/quienes-somos-banner.jpg");
+    background-image: url(nth($list: $imagenes-hero-banner, $n:2 ));
 }
 
 .instalaciones {

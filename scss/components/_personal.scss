@@ -3,7 +3,7 @@
 /**-------------------------------------------------------------------*/
 
 .banner-img-personal {
-    background-image: url("../img/personal-banner.jpg");
+    background-image: url(nth($list: $imagenes-hero-banner, $n:4 ));
 }
 
 .personal-medico {

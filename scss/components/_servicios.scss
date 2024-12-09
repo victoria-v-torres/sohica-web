@@ -3,7 +3,7 @@
 /**-------------------------------------------------------------------*/
 
 .banner-img-servicios {
-    background-image: url("../img/servicios-banner.jpg");
+    background-image: url(nth($list: $imagenes-hero-banner, $n:3 ));
 }
 
 .contenedor-servicios {
