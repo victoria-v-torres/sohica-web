@@ -317,6 +317,11 @@ del contendor de Bootstrap*/
 }
 
 /*Modificaciones a las clases del carrusel de Bootstrap*/
+.carousel-control-prev,
+.carousel-control-next {
+  transition: 0.3s ease-in-out;
+}
+
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   background-color: rgba(2, 120, 171, 0.0745098039);
