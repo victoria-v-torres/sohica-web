@@ -218,6 +218,11 @@ del contendor de Bootstrap*/
   width: 100%;
 }
 
+/*Suaviza el paso al hover de los links de la navbar*/
+.nav-link {
+  transition: 0.4s ease-in-out;
+}
+
 /*Cambia el color del hover de los links de la navbar de Bootstrap*/
 .nav-link:hover {
   color: #1085b6;
