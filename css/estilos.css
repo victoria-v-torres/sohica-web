@@ -17,6 +17,15 @@ encabezados utilizados en la web y de los parrafos*/
 .btn-outline-info, .btn-outline-primary, .btn-primary {
   margin: 10px;
   border-radius: 5px;
+  transition: 0.4s ease-in-out;
+}
+
+/*Propiedades de animación (transition y transform) para botones de redes sociales*/
+.personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-end a, .personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-start a, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-end a, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-start a, footer .footer-redes-sociales div a {
+  transition: 0.4s;
+}
+.personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-end a:hover, .personal-procesos .contenedor-cards .card-informativa-procesos .redes-2-start a:hover, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-end a:hover, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico .redes-1-start a:hover, footer .footer-redes-sociales div a:hover {
+  transform: scale(1.2);
 }
 
 /*Propiedades fijas para los banners de las páginas*/
@@ -262,6 +271,7 @@ del contendor de Bootstrap*/
   margin: 0 1em;
   background-color: #a0f5a0;
   width: 23.3333333333%;
+  transition: ease-in-out 0.5s;
 }
 .card .image-wrapper {
   width: auto;
@@ -284,7 +294,7 @@ del contendor de Bootstrap*/
   align-items: center;
 }
 .card:hover {
-  top: -6px;
+  transform: translateY(-6px);
   background-color: #e0f5e0;
   box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
   -webkit-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
@@ -415,11 +425,18 @@ footer .footer-redes-sociales div {
   justify-content: left;
   align-items: center;
 }
+footer .footer-redes-sociales div a {
+  width: fit-content;
+}
 footer .footer-redes-sociales div a i {
+  width: 100%/3;
   margin: 10px;
   padding: 5px;
   font-size: 35px;
   color: #0587bf;
+}
+footer .footer-redes-sociales div a i:hover {
+  color: #066a95;
 }
 
 /**-------------------------------------------------------*/
@@ -556,6 +573,8 @@ footer .footer-redes-sociales div a i {
   width: 100%;
   height: 100%;
   margin: 30px;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
 }
 .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a {
   height: 100%;

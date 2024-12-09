@@ -39,6 +39,15 @@ $font-size-encabezados-y-parrafos: 60px, 40px, 20px;
 %btn-propiedades-fijas {
     margin: 10px;
     border-radius: 5px;
+    transition: 0.4s ease-in-out;
+}
+
+/*Propiedades de animación (transition y transform) para botones de redes sociales*/
+%animacion-botones-redes {
+    transition: 0.4s;
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
 /*Propiedades fijas para los banners de las páginas*/

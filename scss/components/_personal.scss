@@ -41,6 +41,8 @@
                     @include redes-posicion(start);
                     
                     a {
+                        @extend %animacion-botones-redes;
+
                         i {
                             @include icono-redes-color(#28c728);
                         }
@@ -51,6 +53,8 @@
                     @include redes-posicion(end);
         
                     a {
+                        @extend %animacion-botones-redes;
+
                         i {
                             @include icono-redes-color(#28c728);
                         }
@@ -97,6 +101,8 @@
             .redes-2-start{
                 @include redes-posicion(start);
                 a {
+                    @extend %animacion-botones-redes;
+
                     i {
                         @include icono-redes-color(#3f9ac1);
                     }
@@ -107,6 +113,8 @@
                 @include redes-posicion(end);
         
                 a {
+                    @extend %animacion-botones-redes;
+                    
                     i {
                         @include icono-redes-color(#3f9ac1);
                     }

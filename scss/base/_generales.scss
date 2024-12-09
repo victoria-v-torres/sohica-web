@@ -161,6 +161,7 @@ del contendor de Bootstrap*/
     margin: 0 1em;
     background-color: #a0f5a0;
     width: calc(70%/3);
+    transition: ease-in-out 0.5s;
 
     .image-wrapper {
         width: auto;
@@ -183,7 +184,7 @@ del contendor de Bootstrap*/
     }
 
     &:hover {
-        top: -6px;
+        transform: translateY(-6px);
         background-color: #e0f5e0;
         box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
         -webkit-box-shadow: 0px 4px 14px -4px rgba(73, 97, 65, 0.571);
