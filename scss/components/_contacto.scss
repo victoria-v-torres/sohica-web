@@ -8,7 +8,7 @@
 
 .contacto-mapa-form {
     @include flexbox-propiedades(flex,row,space-around,center);
-    margin: 100px 30px 100px 30px;
+    margin: 80px 30px 80px 30px;
     padding: 10px;
 
     .mapa {
@@ -22,6 +22,8 @@
 
         iframe {
             margin: 10px;
+            width: 400px;
+            height: 382px;
         }
     }
 

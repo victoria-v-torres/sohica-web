@@ -259,12 +259,16 @@
     .contenedor-quienes-somos {
         .quienes-somos {
             div {
-                margin: 100px 0 0 0;
+                margin: 40px 0 0 0;
             }
 
             &:nth-child(1) {
                 flex-direction: column-reverse;
             }
+        }
+
+        .quienes-somos img {
+            width: 80%;
         }
     }
 
@@ -312,9 +316,11 @@
 
 
     /*?---------- PÁGINA PERSONAL ----------*/
+
     .personal-medico .contenedor-cards .card-informativa-medico,
     .personal-procesos .contenedor-cards .card-informativa-procesos {
         flex-direction: column;
+        align-items: center;
 
         &:nth-child(even) {
             flex-direction: column-reverse;
@@ -331,7 +337,12 @@
         width: 400px;
     }
 
-    /*?----------PÁGINA CONTACTO ----------*/
+    /*?---------- PÁGINA CONTACTO ----------*/
+
+    .banner-img-contacto {
+        background-image: url("../img/contacto-banner-pequeño.jpg");
+    }
+
     .contacto-mapa-form .mapa iframe {
         width: 550px;
         height: 450px;
@@ -357,19 +368,7 @@
         font-size: 50px;
     }
 
-    /*?---------- PÁGINA ¿QUIÉNES SOMOS? ----------*/
-    .contenedor-quienes-somos {
-        .quienes-somos {
-            div {
-                margin: 100px 0 0 0;
-            }
-
-            &:nth-child(1) {
-                flex-direction: column-reverse;
-            }
-        }
-    }
-
+    /*?---------- PÁGINA QUIENES SOMOS ----------*/
     .instalaciones h2 {
         margin-left: 0px;
         width: 100%;
@@ -379,6 +378,7 @@
     .instalaciones .grid-galeria {
         grid-template-columns: repeat(1, 1fr);
     }
+
 }
 
 @media screen and (max-width: 675px) {
@@ -468,13 +468,16 @@
 
 
     /*?---------- PÁGINA CONTACTO ----------*/
-
     .banner {
         height: calc(100vh - 95px);
     }
 
     .banner-info h1 {
         font-size: 50px;
+    }
+
+    .contacto-mapa-form {
+        margin: 50px 30px 80px 30px;
     }
 
     .contacto-mapa-form .mapa iframe {
@@ -669,7 +672,10 @@
 
     footer .footer-redes-sociales {
         text-align: center;
+    }
 
+    footer .footer-redes-sociales h2 {
+        width: 100%;
     }
 }
 
@@ -727,6 +733,11 @@
         font-size: 30px;
     }
 
+    /*?----------PÁGINA QUIENES SOMOS ----------*/
+    .instalaciones h2 {
+        font-size: 30px;
+    }
+
     /*?---------- PÁGINA SERVICIOS ----------*/
     .contenedor-servicios {
         .servicio-contenedor {
@@ -765,7 +776,7 @@
     }
 
     .contacto-mapa-form .formulario h2 {
-        width: 80%;
+        font-size: 25px;
     }
 
     /*?---------- FOOTER ----------*/

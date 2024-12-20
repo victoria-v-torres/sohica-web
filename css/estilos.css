@@ -83,7 +83,7 @@ y gestión de seguridad de procesos*/
 
 /*Propiedades fijas para el contenido informativo en las cards del personal*/
 .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos, .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico {
-  padding: 30px;
+  padding: 15px 30px 30px 30px;
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -671,7 +671,7 @@ footer .footer-redes-sociales div a i:hover {
 }
 
 .instalaciones {
-  margin: 100px 30px 100px 30px;
+  margin: 70px 30px 100px 30px;
 }
 .instalaciones h2 {
   margin-left: 40px;
@@ -746,6 +746,7 @@ footer .footer-redes-sociales div a i:hover {
   border-bottom: 4px solid #28c728;
 }
 .personal-medico .contenedor-cards .card-informativa-medico {
+  align-items: start;
   border-bottom: 2px solid rgba(40, 199, 40, 0.4196078431);
 }
 .personal-medico .contenedor-cards .card-informativa-medico .card-contenido-medico h3 {
@@ -774,6 +775,7 @@ footer .footer-redes-sociales div a i:hover {
   border-bottom: 4px solid #3f9ac1;
 }
 .personal-procesos .contenedor-cards .card-informativa-procesos {
+  align-items: start;
   border-bottom: 2px solid rgba(63, 154, 193, 0.4274509804);
 }
 .personal-procesos .contenedor-cards .card-informativa-procesos .card-contenido-procesos h3 {
@@ -804,7 +806,7 @@ footer .footer-redes-sociales div a i:hover {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 100px 30px 100px 30px;
+  margin: 80px 30px 80px 30px;
   padding: 10px;
 }
 .contacto-mapa-form .mapa {
@@ -820,6 +822,8 @@ footer .footer-redes-sociales div a i:hover {
 }
 .contacto-mapa-form .mapa iframe {
   margin: 10px;
+  width: 400px;
+  height: 382px;
 }
 .contacto-mapa-form .formulario {
   display: flex;
@@ -1037,10 +1041,13 @@ footer .footer-redes-sociales div a i:hover {
   }
   /*?---------- PÁGINA ¿QUIÉNES SOMOS? ----------*/
   .contenedor-quienes-somos .quienes-somos div {
-    margin: 100px 0 0 0;
+    margin: 40px 0 0 0;
   }
   .contenedor-quienes-somos .quienes-somos:nth-child(1) {
     flex-direction: column-reverse;
+  }
+  .contenedor-quienes-somos .quienes-somos img {
+    width: 80%;
   }
   .instalaciones .grid-galeria {
     grid-template-columns: repeat(2, 1fr);
@@ -1075,6 +1082,7 @@ footer .footer-redes-sociales div a i:hover {
   .personal-medico .contenedor-cards .card-informativa-medico,
   .personal-procesos .contenedor-cards .card-informativa-procesos {
     flex-direction: column;
+    align-items: center;
   }
   .personal-medico .contenedor-cards .card-informativa-medico:nth-child(even),
   .personal-procesos .contenedor-cards .card-informativa-procesos:nth-child(even) {
@@ -1090,7 +1098,10 @@ footer .footer-redes-sociales div a i:hover {
   .personal-medico .contenedor-cards .card-informativa-medico img {
     width: 400px;
   }
-  /*?----------PÁGINA CONTACTO ----------*/
+  /*?---------- PÁGINA CONTACTO ----------*/
+  .banner-img-contacto {
+    background-image: url("../img/contacto-banner-pequeño.jpg");
+  }
   .contacto-mapa-form .mapa iframe {
     width: 550px;
     height: 450px;
@@ -1110,13 +1121,7 @@ footer .footer-redes-sociales div a i:hover {
   .banner-info h1 {
     font-size: 50px;
   }
-  /*?---------- PÁGINA ¿QUIÉNES SOMOS? ----------*/
-  .contenedor-quienes-somos .quienes-somos div {
-    margin: 100px 0 0 0;
-  }
-  .contenedor-quienes-somos .quienes-somos:nth-child(1) {
-    flex-direction: column-reverse;
-  }
+  /*?---------- PÁGINA QUIENES SOMOS ----------*/
   .instalaciones h2 {
     margin-left: 0px;
     width: 100%;
@@ -1191,6 +1196,9 @@ footer .footer-redes-sociales div a i:hover {
   }
   .banner-info h1 {
     font-size: 50px;
+  }
+  .contacto-mapa-form {
+    margin: 50px 30px 80px 30px;
   }
   .contacto-mapa-form .mapa iframe {
     width: 450px;
@@ -1337,6 +1345,9 @@ footer .footer-redes-sociales div a i:hover {
   footer .footer-redes-sociales {
     text-align: center;
   }
+  footer .footer-redes-sociales h2 {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 500px) {
   /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
@@ -1378,6 +1389,10 @@ footer .footer-redes-sociales div a i:hover {
     width: fit-content;
     font-size: 30px;
   }
+  /*?----------PÁGINA QUIENES SOMOS ----------*/
+  .instalaciones h2 {
+    font-size: 30px;
+  }
   /*?---------- PÁGINA SERVICIOS ----------*/
   .contenedor-servicios .servicio-contenedor {
     flex-direction: column;
@@ -1405,7 +1420,7 @@ footer .footer-redes-sociales div a i:hover {
     width: 300px;
   }
   .contacto-mapa-form .formulario h2 {
-    width: 80%;
+    font-size: 25px;
   }
   /*?---------- FOOTER ----------*/
   footer .footer-info img {

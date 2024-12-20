@@ -23,10 +23,11 @@
     .contenedor-cards {
 
         .card-informativa-medico {
+            align-items: start;
+            
             @include card-informativa-personal(#28c7286b);
         
             img {
-
                 @extend %card-informativa-personal-img;
             }
         
@@ -83,6 +84,7 @@
     .contenedor-cards {
 
         .card-informativa-procesos {
+            align-items: start;
             @include card-informativa-personal(#3f9ac16d);
         
             img {
