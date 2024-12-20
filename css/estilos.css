@@ -879,6 +879,12 @@ footer .footer-redes-sociales div a i:hover {
     font-size: 26px;
   }
 }
+@media screen and (max-width: 990px) {
+  .contenedor-servicios .servicio-contenedor {
+    height: auto;
+    margin: 50px 20px 50px 20px;
+  }
+}
 @media screen and (max-width: 970px) {
   /*?----------INDEX: SERVICIOS GRID ----------*/
   .servicios .servicios-contenedor .grid-servicios {
