@@ -143,6 +143,7 @@
 
     /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
     .quienes-somos {
+        margin: 40px 30px 40px 30px;
         flex-direction: column;
         padding: 20px;
     }
@@ -189,6 +190,10 @@
     }
 
     /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+    .servicios {
+        margin: 40px 0 40px 0;
+    }
+    
     .servicios h2 {
         width: 70%;
         margin: 10px 15% 10px 15%;
@@ -233,6 +238,7 @@
     }
 
     .contacto div h2 {
+        margin: 0 10px 15px 10px;
         text-align: center;
         font-size: 35px;
     }
@@ -370,6 +376,10 @@
 
 @media screen and (max-width: 675px) {
 
+    body h2 {
+        font-size: 35px;
+    }
+
     /*? INDEX: SECCIÓN HERO */
 
     .hero {
@@ -378,14 +388,21 @@
 
     /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
     .quienes-somos div h2 {
-        width: 80%;
+        width: fit-content;
         margin: 0 10% 0 10%;
-        font-size: 30px;
     }
 
-    /*? INDEX: SECCIÓN ÁREAS DE TRABAJO */
+    .quienes-somos img {
+        width: 75%;
+    }
+
+    /*?----------INDEX: SECCIÓN ÁREAS DE TRABAJO ----------*/
     .salud-ocu-gestion-proc {
-        margin-bottom: 300px;
+        margin-bottom: 200px;
+    }
+
+    .salud-ocu-gestion-proc  h2 {
+        border-bottom: none;
     }
 
     .salud-ocu-gestion-proc div .salud-ocupacional {
@@ -396,11 +413,26 @@
         justify-content: center;
     }
 
+    /*?---------- INDEX: SECCIÓN SERVICIOS ----------*/
+    .servicios h2 {
+        font-size: 35px;
+    }
+
+    /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
+    .personal h2 {
+        width: fit-content;
+        font-size: 35px;
+    }
+
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
 
     .contacto iframe {
         width: 450px;
         height: 350px;
+    }
+
+    .contacto div h2 {
+        font-size: 35px;
     }
 
 
@@ -473,6 +505,11 @@
         height: calc(100vh - 85px);
     }
 
+    /*?---------- INDEX: SECCIÓN SERVICIOS ----------*/
+    .servicios {
+        margin-top: 250px;
+    }
+
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
     .contacto div h2 {
         font-size: 28px;
@@ -483,10 +520,6 @@
 
     body p {
         font-size: 20px;
-    }
-
-    body h2 {
-        font-size: 35px;
     }
 
     /*? INDEX: SECCIÓN HERO */
@@ -510,10 +543,9 @@
     }
 
     /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
-    .servicios h2 {
-        font-size: 25px;
+    .servicios {
+        margin-top: 300px;
     }
-
     .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a img {
         height: 60%;
     }
@@ -524,9 +556,6 @@
     }
 
     /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
-    .personal h2 {
-        font-size: 25px;
-    }
 
     .card-title {
         font-size: 20px;
@@ -637,21 +666,30 @@
     }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 500px) {
 
     /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
     .quienes-somos div h2 {
         width: 100%;
     }
 
+    /*?---------- INDEX: SECCIÓN ÁREAS DE TRABAJO ----------*/
+    .salud-ocu-gestion-proc {
+        margin-bottom: 360px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
+
+    .quienes-somos div h2 {
+        font-size: 30px;
+    }
+
     .quienes-somos div a {
         width: 80%;
         margin: 0 10% 0 10%;
-    }
-
-    /*? INDEX: SECCIÓN ÁREAS DE TRABAJO */
-    .salud-ocu-gestion-proc {
-        margin-bottom: 400px;
     }
 
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
@@ -663,9 +701,23 @@
 
     /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
 
+    .servicios h2 {
+        font-size: 30px;
+    }
+
     .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
         width: 100%;
         font-size: 25px;
+    }
+
+    /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
+    .personal {
+        margin-top: 20px;
+    }
+    
+    .personal h2 {
+        width: fit-content;
+        font-size: 30px;
     }
 
     /*?---------- PÁGINA SERVICIOS ----------*/
@@ -732,6 +784,20 @@
         height: calc(100vh - 75px);
     }
 
+    /*?---------- INDEX: SECCIÓN ÁREAS DE TRABAJO ----------*/
+    .salud-ocu-gestion-proc {
+        margin-bottom: 400px;
+    }
+
+    /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+    .servicios {
+        margin-top: 200px;
+    }
+    
+    .servicios h2{
+        font-size: 30px;
+    }
+
     /*?---------- PÁGINA SERVICIOS ----------*/
     .contenedor-servicios {
         .servicio-contenedor {
@@ -765,11 +831,18 @@
     .card-subtitle {
         text-align: center;
     }
+    
+}
 
+@media screen and (max-width: 400px) {
+    /*?---------- INDEX: SECCIÓN ÁREAS DE TRABAJO  ----------*/
+    .salud-ocu-gestion-proc {
+        margin-bottom: 450px;
+    }
 }
 
 @media screen and (max-width: 385px) {
-    /*? INDEX: SECCIÓN HERO */
+    /*?---------- INDEX: SECCIÓN HERO ----------*/
 
     .banner-info h1 {
         font-size: 30px;
@@ -805,10 +878,13 @@
     }
 
     /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+    .servicios h2 {
+        font-size: 27px;
+    }
 
     .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
         width: 100%;
-        font-size: 20px;
+        font-size: 22px;
     }
 
     /*?---------- INDEX: SECCIÓN CONTACTO ----------*/

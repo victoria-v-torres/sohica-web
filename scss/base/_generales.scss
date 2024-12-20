@@ -13,6 +13,7 @@ body {
     font-family: "Sarabun", serif;
     font-weight: 400;
     background-color: $color-bg-page;
+    
 
     h1 {
         font-size: nth($list: $font-size-encabezados-y-parrafos, $n:1 );

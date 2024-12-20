@@ -8,7 +8,8 @@
 
 .contenedor-servicios {
     .servicio-contenedor {
-        margin: 100px 20px 100px 20px;
+        height: 110vh;
+        margin: 20px;
         @include flexbox-propiedades(flex,row,center,center);
         
         img {

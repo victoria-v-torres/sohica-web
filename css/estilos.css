@@ -464,7 +464,7 @@ footer .footer-redes-sociales div a i:hover {
 
 /* +++++++++++++++++++++  Sección ¿Quiénes somos?  +++++++++++++++++ */
 .quienes-somos {
-  margin: 100px 30px 100px 30px;
+  margin: 60px 30px 60px 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -490,7 +490,7 @@ footer .footer-redes-sociales div a i:hover {
 
 /* +++++++++++++++++++++  Sección Salud Ocupacional y Gestión de Seguridad de Procesos  +++++++++++++++++ */
 .salud-ocu-gestion-proc {
-  margin-top: 100px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -555,9 +555,14 @@ footer .footer-redes-sociales div a i:hover {
 
 /* +++++++++++++++++++++  Sección Servicios  +++++++++++++++++ */
 .servicios {
-  margin: 50px 0 50px 0;
+  margin: 50px 0 40px 0;
   padding: 20px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .servicios h2 {
   width: fit-content;
@@ -583,6 +588,7 @@ footer .footer-redes-sociales div a i:hover {
   width: 100%;
   height: 100%;
   margin: 30px;
+  padding: 20px;
   border-radius: 5px;
   transition: 0.4s ease-in-out;
 }
@@ -597,13 +603,13 @@ footer .footer-redes-sociales div a i:hover {
 }
 .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a img {
   width: auto;
-  height: 60%;
+  height: 55%;
 }
 .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
   margin-top: 10px;
   height: 40%;
   color: #122027;
-  font-size: 30px;
+  font-size: 28px;
 }
 .servicios .servicios-contenedor .grid-servicios .grid-servicios-item:hover {
   background-color: rgba(0, 195, 0, 0.3215686275);
@@ -625,7 +631,7 @@ footer .footer-redes-sociales div a i:hover {
 
 /* +++++++++++++++++++++  Sección Contácto  +++++++++++++++++ */
 .contacto {
-  padding: 60px;
+  padding: 20px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -671,6 +677,7 @@ footer .footer-redes-sociales div a i:hover {
   margin-left: 40px;
 }
 .instalaciones .grid-galeria {
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   margin: 40px;
 }
@@ -697,7 +704,8 @@ footer .footer-redes-sociales div a i:hover {
 }
 
 .contenedor-servicios .servicio-contenedor {
-  margin: 100px 20px 100px 20px;
+  height: 110vh;
+  margin: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -935,6 +943,7 @@ footer .footer-redes-sociales div a i:hover {
 @media screen and (max-width: 855px) {
   /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
   .quienes-somos {
+    margin: 40px 30px 40px 30px;
     flex-direction: column;
     padding: 20px;
   }
@@ -975,6 +984,9 @@ footer .footer-redes-sociales div a i:hover {
     justify-content: left;
   }
   /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+  .servicios {
+    margin: 40px 0 40px 0;
+  }
   .servicios h2 {
     width: 70%;
     margin: 10px 15% 10px 15%;
@@ -1009,6 +1021,7 @@ footer .footer-redes-sociales div a i:hover {
     height: 450px;
   }
   .contacto div h2 {
+    margin: 0 10px 15px 10px;
     text-align: center;
     font-size: 35px;
   }
@@ -1108,19 +1121,27 @@ footer .footer-redes-sociales div a i:hover {
   }
 }
 @media screen and (max-width: 675px) {
+  body h2 {
+    font-size: 35px;
+  }
   /*? INDEX: SECCIÓN HERO */
   .hero {
     height: calc(100vh - 75px);
   }
   /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
   .quienes-somos div h2 {
-    width: 80%;
+    width: fit-content;
     margin: 0 10% 0 10%;
-    font-size: 30px;
   }
-  /*? INDEX: SECCIÓN ÁREAS DE TRABAJO */
+  .quienes-somos img {
+    width: 75%;
+  }
+  /*?----------INDEX: SECCIÓN ÁREAS DE TRABAJO ----------*/
   .salud-ocu-gestion-proc {
-    margin-bottom: 300px;
+    margin-bottom: 200px;
+  }
+  .salud-ocu-gestion-proc h2 {
+    border-bottom: none;
   }
   .salud-ocu-gestion-proc div .salud-ocupacional {
     justify-content: center;
@@ -1128,10 +1149,22 @@ footer .footer-redes-sociales div a i:hover {
   .salud-ocu-gestion-proc div .gestion-procesos {
     justify-content: center;
   }
+  /*?---------- INDEX: SECCIÓN SERVICIOS ----------*/
+  .servicios h2 {
+    font-size: 35px;
+  }
+  /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
+  .personal h2 {
+    width: fit-content;
+    font-size: 35px;
+  }
   /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
   .contacto iframe {
     width: 450px;
     height: 350px;
+  }
+  .contacto div h2 {
+    font-size: 35px;
   }
   .contenedor-quienes-somos .quienes-somos div {
     margin: 50px 0 0 0;
@@ -1178,6 +1211,10 @@ footer .footer-redes-sociales div a i:hover {
   .banner {
     height: calc(100vh - 85px);
   }
+  /*?---------- INDEX: SECCIÓN SERVICIOS ----------*/
+  .servicios {
+    margin-top: 250px;
+  }
   /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
   .contacto div h2 {
     font-size: 28px;
@@ -1186,9 +1223,6 @@ footer .footer-redes-sociales div a i:hover {
 @media screen and (max-width: 550px) {
   body p {
     font-size: 20px;
-  }
-  body h2 {
-    font-size: 35px;
   }
   /*? INDEX: SECCIÓN HERO */
   .hero {
@@ -1206,8 +1240,8 @@ footer .footer-redes-sociales div a i:hover {
     margin: 0 25% 0 25%;
   }
   /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
-  .servicios h2 {
-    font-size: 25px;
+  .servicios {
+    margin-top: 300px;
   }
   .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a img {
     height: 60%;
@@ -1217,9 +1251,6 @@ footer .footer-redes-sociales div a i:hover {
     font-size: 20px;
   }
   /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
-  .personal h2 {
-    font-size: 25px;
-  }
   .card-title {
     font-size: 20px;
   }
@@ -1301,18 +1332,24 @@ footer .footer-redes-sociales div a i:hover {
     text-align: center;
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 500px) {
   /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
   .quienes-somos div h2 {
     width: 100%;
   }
+  /*?---------- INDEX: SECCIÓN ÁREAS DE TRABAJO ----------*/
+  .salud-ocu-gestion-proc {
+    margin-bottom: 360px;
+  }
+}
+@media screen and (max-width: 460px) {
+  /*?----------INDEX: SECCIÓN QUIENES SOMOS ----------*/
+  .quienes-somos div h2 {
+    font-size: 30px;
+  }
   .quienes-somos div a {
     width: 80%;
     margin: 0 10% 0 10%;
-  }
-  /*? INDEX: SECCIÓN ÁREAS DE TRABAJO */
-  .salud-ocu-gestion-proc {
-    margin-bottom: 400px;
   }
   /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
   .contacto iframe {
@@ -1320,9 +1357,20 @@ footer .footer-redes-sociales div a i:hover {
     height: 150px;
   }
   /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+  .servicios h2 {
+    font-size: 30px;
+  }
   .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
     width: 100%;
     font-size: 25px;
+  }
+  /*?---------- INDEX: SECCIÓN CARRUSEL PERSONAL ----------*/
+  .personal {
+    margin-top: 20px;
+  }
+  .personal h2 {
+    width: fit-content;
+    font-size: 30px;
   }
   /*?---------- PÁGINA SERVICIOS ----------*/
   .contenedor-servicios .servicio-contenedor {
@@ -1371,6 +1419,17 @@ footer .footer-redes-sociales div a i:hover {
   .banner {
     height: calc(100vh - 75px);
   }
+  /*?---------- INDEX: SECCIÓN ÁREAS DE TRABAJO ----------*/
+  .salud-ocu-gestion-proc {
+    margin-bottom: 400px;
+  }
+  /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+  .servicios {
+    margin-top: 200px;
+  }
+  .servicios h2 {
+    font-size: 30px;
+  }
   /*?---------- PÁGINA SERVICIOS ----------*/
   .contenedor-servicios .servicio-contenedor img {
     width: 200px;
@@ -1394,8 +1453,14 @@ footer .footer-redes-sociales div a i:hover {
     text-align: center;
   }
 }
+@media screen and (max-width: 400px) {
+  /*?---------- INDEX: SECCIÓN ÁREAS DE TRABAJO  ----------*/
+  .salud-ocu-gestion-proc {
+    margin-bottom: 450px;
+  }
+}
 @media screen and (max-width: 385px) {
-  /*? INDEX: SECCIÓN HERO */
+  /*?---------- INDEX: SECCIÓN HERO ----------*/
   .banner-info h1 {
     font-size: 30px;
   }
@@ -1423,9 +1488,12 @@ footer .footer-redes-sociales div a i:hover {
     font-size: 15px;
   }
   /*?----------INDEX: SECCIÓN SERVICIOS GRID ----------*/
+  .servicios h2 {
+    font-size: 27px;
+  }
   .servicios .servicios-contenedor .grid-servicios .grid-servicios-item a h3 {
     width: 100%;
-    font-size: 20px;
+    font-size: 22px;
   }
   /*?---------- INDEX: SECCIÓN CONTACTO ----------*/
   .contacto {
