@@ -719,12 +719,16 @@ footer .footer-redes-sociales div a i:hover {
 }
 
 .contenedor-servicios .servicio-contenedor {
-  height: 110vh;
-  margin: 20px;
+  height: 125vh;
+  margin: 20px 20px 20px 20px;
+  background-image: url("../img/encabezado-servicio-procesos.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 .contenedor-servicios .servicio-contenedor img {
   width: 330px;
@@ -742,6 +746,12 @@ footer .footer-redes-sociales div a i:hover {
 .contenedor-servicios .servicio-contenedor div p {
   text-align: left;
   text-indent: 1.5em;
+}
+.contenedor-servicios .servicio-contenedor:nth-child(-n+2) {
+  background-image: url("../img/encabezado-servicio-salud.png");
+}
+.contenedor-servicios .servicio-contenedor:last-child {
+  margin-bottom: 100px;
 }
 
 /**-------------------------------------------------------------------*/
@@ -899,9 +909,21 @@ footer .footer-redes-sociales div a i:hover {
   }
 }
 @media screen and (max-width: 990px) {
+  /*?----------PÁGINA SERVICIOS ----------*/
   .contenedor-servicios .servicio-contenedor {
     height: auto;
+    align-items: center;
     margin: 50px 20px 50px 20px;
+    background-image: none;
+  }
+  .contenedor-servicios .servicio-contenedor div h2 {
+    border-bottom: 4px solid #3f9ac1;
+  }
+  .contenedor-servicios .servicio-contenedor:nth-child(-n+2) {
+    background-image: none;
+  }
+  .contenedor-servicios .servicio-contenedor:nth-child(-n+2) div h2 {
+    border-bottom: 4px solid #28c728;
   }
 }
 @media screen and (max-width: 970px) {

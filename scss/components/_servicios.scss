@@ -8,17 +8,23 @@
 
 .contenedor-servicios {
     .servicio-contenedor {
-        height: 110vh;
-        margin: 20px;
-        @include flexbox-propiedades(flex,row,center,center);
-        
+        height: 125vh;
+        margin: 20px 20px 20px 20px;
+        background-image: url("../img/encabezado-servicio-procesos.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        @include flexbox-propiedades(flex,row,center,end);
+
         img {
+
             width: 330px;
             margin: 25px;
             
         }
-    
+        
         div {
+
             width: 60%;
             padding: 40px;
     
@@ -32,6 +38,14 @@
                 text-align: left;
                 text-indent: 1.5em;
             }
+        }
+
+        &:nth-child(-n +2) {
+            background-image: url("../img/encabezado-servicio-salud.png");
+        }
+
+        &:last-child {
+            margin-bottom: 100px;
         }
     }
 }

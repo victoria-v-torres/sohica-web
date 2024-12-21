@@ -61,10 +61,29 @@
 }
 
 @media screen and (max-width: 990px) {
+    /*?----------PÁGINA SERVICIOS ----------*/
     .contenedor-servicios .servicio-contenedor {
         height: auto;
+        align-items: center;
         margin: 50px 20px 50px 20px;
-}
+        background-image: none;
+
+        div {
+            h2 {
+                border-bottom: 4px solid #3f9ac1;
+            }
+        }
+    
+        &:nth-child(-n +2) {
+        background-image: none;
+
+            div {
+                h2 {
+                    border-bottom: 4px solid #28c728;
+                }
+            }
+        }
+    }
 }
 
 
@@ -93,7 +112,6 @@
     .contacto div h2 {
         font-size: 35px;
     }
-
 
     /*?----------PÁGINA CONTACTO ----------*/
     .contacto-mapa-form {
