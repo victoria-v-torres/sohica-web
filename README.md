@@ -7,11 +7,11 @@ Victoria Torres
 ## Versión 💻
 La versión actual del proyecto corresponde a la entrega final del curso "Desarrollo Web" de CODERHOUSE.
 
-## Link de _Github Page_🔗
+## Link de _Github Page_ 🔗
 https://victoria-v-torres.github.io/sohica-web/
 
-## Link del sitio web en servidor _Netlify_🔗
-
+## Link del sitio web en servidor _Netlify_ 🔗
+https://sohica.netlify.app/
 
 ## Notas importantes 📝
 - En la versión actual del proyecto se trabajó en el maquetado de las diferentes páginas del sitio web (5 en total) haciendo uso de HTML y SASS.
