@@ -8,7 +8,7 @@
 
 .contenedor-servicios {
     .servicio-contenedor {
-        height: 125vh;
+        height: 120vh;
         margin: 20px 20px 20px 20px;
         background-image: url("../img/encabezado-servicio-procesos.png");
         background-size: contain;
@@ -45,6 +45,7 @@
         }
 
         &:last-child {
+            background-image: url("../img/encabezado-servicios-salud-procesos.png");
             margin-bottom: 100px;
         }
     }
